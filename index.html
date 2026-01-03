@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>توتال تولز اليمن | الوكيل المعتمد (محلات قَدَس) - أدوات ومعدات صناعية</title>
+    <meta name="description" content="الوكيل المعتمد لمنتجات توتال تولز (TOTAL TOOLS) في اليمن. معدات صناعية، أدوات كهربائية ويدوية بأعلى جودة وضمان. فروعنا في عدن.">
+    <meta name="keywords" content="توتال تولز اليمن, محلات قدس, أدوات كهربائية, معدات صناعية, TOTAL TOOLS YEMEN, دريل, مولدات, عدن, اليمن">
+    <meta name="robots" content="index, follow"> 
+    
+    <meta property="og:title" content="توتال تولز اليمن | الوكيل المعتمد">
+    <meta property="og:description" content="شريكك الأول في المعدات الصناعية والحلول المهنية في اليمن.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/">
+    <meta property="og:image" content="https://www.yourdomain.com/total-tools-share-image.jpg"> 
+    
+    <link rel="icon" href="/favicon.png" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        total: {
+                            main: '#00a9ce',   /* لون توتال الرئيسي */
+                            dark: '#008ba8',
+                            accent: '#2c3e50'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .text-gray-800 { color: #2d3748; } 
+        .text-gray-700 { color: #4a5568; }
+        .hero-bg {
+            background-image: linear-gradient(to left, rgba(0, 0, 0, 0.85), rgba(0, 40, 50, 0.8)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=70');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-card { transition: all 0.3s ease-in-out; }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 169, 206, 0.2);
+        }
+        
+        /* 💡 تصحيح منطق الـ Overlay ليكون مخفيًا في البداية */
+        #mobile-menu-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        /* 💡 تصحيح حركة القائمة (تبدأ بـ 100% خارج الشاشة على اليمين) */
+        #mobile-menu {
+            /* Fix: تأكدنا أنها ثابتة على اليمين تماماً */
+            right: 0; 
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem; 
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    
+    <div class="bg-total-dark text-white text-center py-2 text-sm font-medium">
+        <div class="max-w-7xl mx-auto px-4 flex justify-center items-center">
+            <i class="fas fa-bolt ml-2 text-yellow-300 animate-pulse"></i>
+            <span class="tracking-wide">خصم خاص لتجار الجملة والمشاريع الهندسية - <a href="https://wa.me/967773399970" class="underline hover:text-yellow-300 transition">تواصل الآن</a></span>
+        </div>
+    </div>
+
+    <div class="bg-gray-900 text-gray-300 py-2 text-sm border-b border-gray-700 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6 space-x-reverse">
+                <span><i class="fas fa-phone ml-2 text-total-main"></i> <a href="tel:967774270954" class="hover:text-white dir-ltr">+967 774 270 954</a></span>
+                <span><i class="fas fa-envelope ml-2 text-total-main"></i> <a href="mailto:info@totaltools-yemen.com" class="hover:text-white">info@totaltools-yemen.com</a></span>
+            </div>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="/en" class="text-white bg-total-main px-2 py-0.5 rounded-md hover:bg-total-dark transition">EN</a>
+                <span><i class="fas fa-clock ml-2 text-total-main"></i> أوقات العمل: 8:00 ص - 9:00 م</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="flex items-center" data-aos="fade-down">
+                    <div class="text-3xl font-black text-gray-800 tracking-tighter">
+                        TOTAL <span class="text-total-main">TOOLS</span>
+                    </div>
+                    <div class="mr-3 border-r-2 border-gray-200 pr-3 flex flex-col justify-center">
+                        <span class="text-xs font-bold text-gray-500">الوكيل المعتمد</span>
+                        <span class="text-sm font-bold text-gray-800">محلات قَدَس</span>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex space-x-8 space-x-reverse items-center">
+                    <a href="#home" class="text-gray-700 hover:text-total-main font-bold transition">الرئيسية</a>
+                    <a href="#about" class="text-gray-700 hover:text-total-main font-bold transition">من نحن</a>
+                    <a href="#products" class="text-gray-700 hover:text-total-main font-bold transition">المنتجات</a>
+                    <a href="#partners" class="text-gray-700 hover:text-total-main font-bold transition">شركاؤنا</a>
+                    <a href="#branches" class="text-gray-700 hover:text-total-main font-bold transition">فروعنا</a>
+                    <a href="#contact" class="bg-total-main hover:bg-total-dark text-white px-5 py-2.5 rounded-lg font-bold shadow-md hover:shadow-lg transition flex items-center">
+                        <i class="fas fa-comment-dots ml-2"></i> طلب عرض سعر
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/70 z-40" onclick="toggleMobileMenu()"></div>
+        <div id="mobile-menu" class="fixed top-0 h-full w-64 bg-white shadow-2xl z-50">
+            <div class="flex justify-between items-center p-4 border-b">
+                <span class="text-lg font-bold">القائمة</span>
+                <button onclick="toggleMobileMenu()" class="text-gray-700 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <a href="#home" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 font-semibold border-b" onclick="toggleMobileMenu()">الرئيسية</a>
+            <a href="#about" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 font-semibold border-b" onclick="toggleMobileMenu()">من نحن</a>
+            <a href="#products" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 font-semibold border-b" onclick="toggleMobileMenu()">المنتجات</a>
+            <a href="#partners" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 font-semibold border-b" onclick="toggleMobileMenu()">شركاؤنا</a>
+            <a href="#branches" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 font-semibold border-b" onclick="toggleMobileMenu()">فروعنا</a>
+            <a href="#contact" class="block py-3 px-4 bg-total-main text-white font-bold mt-2" onclick="toggleMobileMenu()">طلب عرض سعر</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg h-[650px] flex items-center relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-white">
+            <div class="max-w-4xl" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="hero-title text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    قوة إنجاز لا تعرف الحدود <br>
+                    مع <span class="text-total-main">توتال تولز</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-10 font-light leading-relaxed max-w-2xl">
+                    نقدم أحدث حلول المعدات والأدوات الاحترافية في اليمن. وكلاء معتمدون لشركة TOTAL العالمية، نخدم المقاولين والورش الصناعية منذ عام 2005.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-total-main hover:bg-total-dark text-white rounded-lg font-bold text-lg transition shadow-lg shadow-total-main/30 flex items-center">
+                        طلب عرض سعر فوري <i class="fas fa-arrow-left mr-3"></i>
+                    </a>
+                    <a href="https://wa.me/967773399970" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur-sm text-white rounded-lg font-bold text-lg transition flex items-center">
+                        <i class="fab fa-whatsapp ml-2 text-green-400 text-xl"></i> تواصل عبر واتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-white shadow-xl relative z-20 -mt-16 mx-4 md:mx-auto max-w-6xl rounded-xl p-8 border-b-4 border-total-main" data-aos="fade-up" data-aos-delay="300">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-x-reverse divide-gray-100">
+            <div data-aos="fade-up" data-aos-delay="400">
+                <div class="text-4xl font-black text-total-main mb-1">18+</div>
+                <div class="text-gray-600 font-medium">عاماً من الخبرة</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="500">
+                <div class="text-4xl font-black text-total-main mb-1">2000+</div>
+                <div class="text-gray-600 font-medium">منتج متوفر</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600">
+                <div class="text-4xl font-black text-total-main mb-1">10K+</div>
+                <div class="text-gray-600 font-medium">عميل سعيد</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="700">
+                <div class="text-4xl font-black text-total-main mb-1">100%</div>
+                <div class="text-gray-600 font-medium">ضمان الوكيل</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-left" data-aos-delay="200">
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-total-main opacity-10 rounded-full z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=70" alt="ورشة عمل" class="relative z-10 rounded-2xl shadow-2xl border-8 border-gray-50" loading="lazy">
+                </div>
+                <div data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="text-total-main font-bold tracking-wider mb-2 text-sm uppercase">نبذة عن الشركة</h2>
+                    <h3 class="text-4xl font-black text-gray-900 mb-6 leading-tight">الجودة التي يعتمد عليها المحترفون</h3>
+                    <p class="text-gray-700 mb-6 leading-loose text-lg">
+                        نحن "توتال تولز اليمن" (محلات قَدَس)، الوكيل الحصري لمنتجات TOTAL العالمية في اليمن. نسعى لتوفير حلول متكاملة لعملائنا من خلال تقديم معدات تجمع بين القوة، المتانة، والسعر المنافس.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-lg text-gray-700" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-check-circle text-total-main ml-3 text-xl"></i>
+                            خدمة ما بعد البيع وقطع الغيار متوفرة لضمان استمرارية عملك
+                        </li>
+                        <li class="flex items-center text-lg text-gray-700" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fas fa-check-circle text-total-main ml-3 text-xl"></i>
+                            أسعار تفضيلية وعروض خاصة لتجار الجملة والمشاريع
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-black text-gray-900 mb-4">ماذا يقول عملاؤنا؟</h2>
+                <p class="text-gray-600 mt-2 text-lg">ثقة عملائنا هي أساس نجاحنا في السوق اليمني.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-total-main" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-quote-right text-total-main text-3xl mb-4"></i>
+                    <p class="text-gray-700 italic mb-6">"توتال تولز هي خياري الأول دائماً. الجودة ثابتة، والأسعار منافسة جداً. خدمة العملاء ممتازة وقطع الغيار متوفرة، وهو الأهم في السوق المحلي."</p>
+                    <div class="font-bold text-gray-900">م. عبد السلام الصبري</div>
+                    <div class="text-sm text-gray-500">مقاول إنشائي</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-total-main" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-quote-right text-total-main text-3xl mb-4"></i>
+                    <p class="text-gray-700 italic mb-6">"منتجاتهم لا غنى عنها في ورشة الحدادة. اشتريت مولد كهرباء وماكينة لحام، وكلاهما يعمل بكفاءة عالية دون مشاكل منذ سنتين."</p>
+                    <div class="font-bold text-gray-900">سالم باوزير</div>
+                    <div class="text-sm text-gray-500">صاحب ورشة حدادة</div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-total-main" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-quote-right text-total-main text-3xl mb-4"></i>
+                    <p class="text-gray-700 italic mb-6">"تعاملنا معهم في توريد معدات مشروع طريق رئيسي. الالتزام بالمواعيد وسرعة التوريد كانت مثالية، بالإضافة إلى شهادات الضمان الرسمية."</p>
+                    <div class="font-bold text-gray-900">شركة البناء الحديث</div>
+                    <div class="text-sm text-gray-500">مدير المشتريات</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-24 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-black text-gray-900 mb-4">تشكيلة المنتجات</h2>
+                <div class="w-24 h-1.5 bg-total-main mx-auto rounded-full"></div>
+                <p class="text-gray-700 mt-4 text-lg">كل ما تحتاجه لإنجاز مهامك بكفاءة عالية</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden product-card group cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?auto=format&fit=crop&w=800&q=70" alt="أدوات كهربائية" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <h3 class="absolute bottom-4 right-4 text-white font-bold text-2xl">أدوات كهربائية</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 leading-relaxed">دريلات، صواريخ قص، مناشير كهربائية، ومعدات تكسير للمهام الشاقة.</p>
+                        <a href="#contact" class="text-total-main font-bold flex items-center group-hover:underline">
+                            طلب كتالوج هذه الفئة <i class="fas fa-arrow-left mr-2 transition-transform group-hover:-translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden product-card group cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=800&q=70" alt="عدد يدوية" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <h3 class="absolute bottom-4 right-4 text-white font-bold text-2xl">عِدد يدوية</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 leading-relaxed">مفكات، زراديات، مفاتيح، وأطقم عدد متكاملة بجودة تصنيع عالية.</p>
+                        <a href="#contact" class="text-total-main font-bold flex items-center group-hover:underline">
+                            طلب كتالوج هذه الفئة <i class="fas fa-arrow-left mr-2 transition-transform group-hover:-translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden product-card group cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=70" alt="معدات ورش" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <h3 class="absolute bottom-4 right-4 text-white font-bold text-2xl">تجهيزات الورش</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 leading-relaxed">مولدات، مكائن لحام، ضواغط هواء، ومعدات السلامة المهنية.</p>
+                        <a href="#contact" class="text-total-main font-bold flex items-center group-hover:underline">
+                            طلب كتالوج هذه الفئة <i class="fas fa-arrow-left mr-2 transition-transform group-hover:-translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="/Total_Tools_Yemen_Catalogue.pdf" target="_blank" class="inline-block border-2 border-total-main text-total-main hover:bg-total-main hover:text-white px-10 py-3 rounded-lg font-bold text-lg transition duration-300">
+                    <i class="fas fa-download ml-2"></i> تحميل الكتالوج الكامل (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="partners" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-2xl font-bold text-gray-900 mb-10" data-aos="fade-up">نثق بنا أكبر المقاولين والشركات في اليمن</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-10 items-center justify-center">
+                <div class="text-gray-400 text-3xl font-extrabold text-center hover:text-total-main transition" data-aos="fade-up" data-aos-delay="100">الشركة أ</div>
+                <div class="text-gray-400 text-3xl font-extrabold text-center hover:text-total-main transition" data-aos="fade-up" data-aos-delay="200">مؤسسة ب</div>
+                <div class="text-gray-400 text-3xl font-extrabold text-center hover:text-total-main transition" data-aos="fade-up" data-aos-delay="300">مقاول ج</div>
+                <div class="text-gray-400 text-3xl font-extrabold text-center hover:text-total-main transition" data-aos="fade-up" data-aos-delay="400">مجموعة د</div>
+                <div class="text-gray-400 text-3xl font-extrabold text-center hover:text-total-main transition" data-aos="fade-up" data-aos-delay="500">شركة هـ</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="branches" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-black text-gray-900 mb-4">تفضل بزيارتنا في فروعنا</h2>
+                <div class="w-24 h-1.5 bg-total-main mx-auto rounded-full"></div>
+                <p class="text-gray-700 mt-4 text-lg">أربع نقاط بيع لخدمتكم في مدينة عدن</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden" data-aos="fade-left">
+                    <div class="p-6">
+                        <h3 class="font-black text-2xl mb-2 text-total-main">الإدارة العامة والفرع الرئيسي</h3>
+                        <p class="text-gray-700 mb-4 flex items-center"><i class="fas fa-map-marker-alt ml-2 text-total-main"></i> الشيخ عثمان، السيلة، شارع العباسي</p>
+                        <a href="tel:967774270954" class="text-gray-800 font-bold flex items-center hover:underline dir-ltr mb-4">
+                            <i class="fas fa-phone mr-2 text-total-main"></i> 774 270 954 967+
+                        </a>
+                    </div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15764.912301460596!2d45.0253488824249!3d12.836069970928924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1637dd38520263f3%3A0x86701f2e9603370e!2z2KzYstin2KjZitipINmE2KzZhdi52KjZiSDZhdin2YfYp9ip!5e0!3m2!1sar!2sye!4v1679075778845!5m2!1sar!2sye" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="block">
+                    </iframe>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden" data-aos="fade-right">
+                    <div class="p-6">
+                        <h3 class="font-black text-2xl mb-2 text-total-main">فرع الخمسين</h3>
+                        <p class="text-gray-700 mb-4 flex items-center"><i class="fas fa-map-marker-alt ml-2 text-total-main"></i> عدن، شارع الخمسين، بجوار سوق عدن مول</p>
+                        <a href="tel:967774270956" class="text-gray-800 font-bold flex items-center hover:underline dir-ltr mb-4">
+                            <i class="fas fa-phone mr-2 text-total-main"></i> 774 270 956 967+
+                        </a>
+                    </div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15767.100914107141!2d45.06847118320496!3d12.809075306381023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1637dd917d5c76c7%3A0x6b402e8649c25f49!2z2KzYstin2KjZiSDYp9mE2YTZiti32YUg2KfZhNij2YTYp9mE2YfYsSDYp9mE2LTYs9mG2K4!5e0!3m2!1sar!2sye!4v1679075899945!5m2!1sar!2sye" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="block">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-gray-600 italic">للاستفسار عن باقي فروع الدرين والسيلة، يرجى التواصل عبر الهاتف.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 mb-16">
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-black mb-8 text-total-main">تواصل معنا</h3>
+                    <p class="text-gray-400 mb-8 text-lg leading-relaxed">
+                        هل تبحث عن معدات محددة أو ترغب في الحصول على عرض سعر؟ فريقنا جاهز لخدمتك والرد على استفساراتك.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-total-main text-xl ml-4 shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">خدمة العملاء (واتساب)</p>
+                                <a href="https://wa.me/967773399970" class="text-xl font-bold font-sans dir-ltr hover:text-total-main transition block text-right">+967 773 399 970</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-total-main text-xl ml-4 shrink-0">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">اتصال مباشر</p>
+                                <a href="tel:967779800984" class="text-xl font-bold font-sans dir-ltr hover:text-total-main transition block text-right">+967 779 800 984</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10" data-aos="fade-right">
+                    <h4 class="text-xl font-bold text-white mb-4">نموذج طلب عرض سعر</h4>
+                    <form action="https://formspree.io/f/youremailhash" method="POST" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm text-gray-400 mb-2">الاسم</label>
+                                <input type="text" id="name" name="الاسم" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-total-main focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm text-gray-400 mb-2">رقم الهاتف</label>
+                                <input type="tel" id="phone" name="رقم_الهاتف" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-total-main focus:outline-none transition text-left" placeholder="07xxxxxxx">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm text-gray-400 mb-2">الرسالة / نوع المعدات المطلوبة</label>
+                            <textarea id="message" name="الرسالة" rows="4" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:border-total-main focus:outline-none transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-total-main hover:bg-total-dark text-white font-bold py-4 rounded-lg transition shadow-lg">
+                            إرسال طلب العرض <i class="fas fa-paper-plane mr-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center md:flex justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">© 2026 توتال تولز اليمن. جميع الحقوق محفوظة. <a href="/privacy-policy" class="text-total-main hover:underline">سياسة الخصوصية</a></p>
+                <div class="flex justify-center space-x-6 space-x-reverse">
+                    <a href="https://www.facebook.com/TotalToolsYemen" target="_blank" class="text-gray-500 hover:text-total-main transition"><i class="fab fa-facebook text-xl"></i></a>
+                    <a href="https://www.instagram.com/TotalToolsYemen" target="_blank" class="text-gray-500 hover:text-total-main transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://t.me/TotalToolsYemen" target="_blank" class="text-gray-500 hover:text-total-main transition"><i class="fab fa-telegram text-xl"></i></a>
+                    <a href="https://twitter.com/TotalToolsYemen" target="_blank" class="text-gray-500 hover:text-total-main transition"><i class="fab fa-twitter text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/967773399970" target="_blank" class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition z-50 animate-bounce">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+    
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // تهيئة مكتبة AOS
+        AOS.init({
+            offset: 120,
+            delay: 0,
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+        });
+
+        // 💡 دالة تحكم قائمة الجوال (Mobile Menu Logic) - تم الإصلاح النهائي
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            
+            // التحقق مما إذا كانت القائمة مرئية (أي تم تحريكها إلى 0%)
+            const isMenuOpen = menu.style.transform === 'translateX(0%)';
+
+            if (isMenuOpen) {
+                // الإغلاق: تحريك القائمة خارج الشاشة (100% يمينًا) وإخفاء الـ overlay
+                menu.style.transform = 'translateX(100%)';
+                overlay.style.opacity = '0';
+                overlay.style.visibility = 'hidden';
+                document.body.style.overflow = ''; // استعادة التمرير
+            } else {
+                // الفتح: تحريك القائمة إلى داخل الشاشة (0%) وإظهار الـ overlay
+                menu.style.transform = 'translateX(0%)';
+                overlay.style.opacity = '1';
+                overlay.style.visibility = 'visible';
+                document.body.style.overflow = 'hidden'; // منع التمرير في الخلفية
+            }
+        }
+        
+        // ربط زر القائمة بالدالة
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // التأكد من أن القائمة مغلقة في البداية عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+             // إعداد الحالة الأولية للقائمة في الجافاسكريبت لضمان تجاوز أي تعارض في Tailwind
+             document.getElementById('mobile-menu').style.transform = 'translateX(100%)';
+             document.getElementById('mobile-menu-overlay').style.opacity = '0';
+             document.getElementById('mobile-menu-overlay').style.visibility = 'hidden';
+        });
+
+    </script>
+</body>
+</html>
