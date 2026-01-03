@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -14,29 +14,34 @@
             --light-bg: #f5f5f5;
         }
 
-        body { 
-            font-family: 'Cairo', sans-serif; 
-            margin: 0; 
-            background: var(--white); 
-            overflow-x: hidden; 
+        /* قاعدة عامة */
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            background: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* 1. الهيدر المطور */
+        /* Header */
         header {
-            background: rgba(255,255,255,0.95);
-            padding: 1rem 5%;
-            display: flex; 
-            justify-content: space-between; 
+            background: rgba(255,255,255,0.98);
+            padding: 0.9rem 5%;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            position: sticky; 
-            top: 0; 
+            position: sticky;
+            top: 0;
             z-index: 1000;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
-        .logo { 
-            font-size: 1.6rem; 
-            font-weight: bold; 
-            color: var(--primary-green); 
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-green);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -45,17 +50,18 @@
             display: none;
             background: none;
             border: none;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--primary-green);
             cursor: pointer;
         }
         nav { display: flex; align-items: center; }
-        nav a { 
-            margin-right: 20px; 
-            text-decoration: none; 
-            color: #333; 
-            font-weight: 600; 
-            transition: 0.3s; 
+        /* في RTL نستخدم margin-left للفصل بين الروابط */
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: 0.25s;
             position: relative;
         }
         nav a:hover { color: var(--primary-green); }
@@ -67,88 +73,91 @@
             bottom: -5px;
             right: 0;
             background-color: var(--accent-orange);
-            transition: width 0.3s;
+            transition: width 0.25s;
         }
         nav a:hover::after { width: 100%; }
 
-        /* 2. قسم الهيرو (مأخوذ من الأول مع تحسين) */
+        /* HERO */
         .hero {
-            height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover; 
+            min-height: 60vh;
+            padding: clamp(2rem, 6vw, 5rem);
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
             background-position: center;
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            text-align: center; 
+            text-align: center;
             color: white;
-            padding: 0 5%;
         }
-        .hero h1 { 
-            font-size: 3.5rem; 
-            margin-bottom: 20px; 
-            animation: slideUp 0.8s ease; 
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin: 0 0 18px 0;
+            animation: slideUp 0.8s ease;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
-        .hero p { 
-            font-size: 1.4rem; 
-            max-width: 800px; 
-            margin-bottom: 40px; 
+        .hero p {
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            max-width: 900px;
+            margin: 0 0 30px 0;
             line-height: 1.6;
+            color: rgba(255,255,255,0.95);
         }
         .hero-btns {
-            display:flex; 
-            gap:20px;
+            display:flex;
+            gap:12px;
             flex-wrap: wrap;
             justify-content: center;
         }
         .btn-primary {
-            background:var(--accent-orange); 
-            color:white; 
-            padding:15px 40px; 
-            border-radius:30px; 
-            text-decoration:none; 
-            font-weight:bold;
-            transition: all 0.3s ease;
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.25s ease;
             border: 2px solid var(--accent-orange);
         }
         .btn-primary:hover {
             background: transparent;
-            color: white;
+            color: var(--white);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+            border-color: rgba(255,255,255,0.85);
         }
         .btn-secondary {
-            border:2px solid white; 
-            color:white; 
-            padding:15px 40px; 
-            border-radius:30px; 
-            text-decoration:none; 
-            font-weight:bold;
-            transition: all 0.3s ease;
+            border:2px solid rgba(255,255,255,0.85);
+            color: rgba(255,255,255,0.95);
+            padding:12px 30px;
+            border-radius:30px;
+            text-decoration:none;
+            font-weight:700;
+            transition:all 0.25s ease;
+            background: transparent;
         }
         .btn-secondary:hover {
-            background: white;
+            background: rgba(255,255,255,0.95);
             color: var(--primary-green);
             transform: translateY(-3px);
         }
 
-        /* 3. قسم "من نحن" المدمج */
-        .about-section { 
-            padding: 80px 8%; 
-            display: flex; 
-            gap: 50px; 
-            align-items: center; 
+        /* About */
+        .about-section {
+            padding: 70px 8%;
+            display: flex;
+            gap: 40px;
+            align-items: center;
             background: var(--light-bg);
             flex-wrap: wrap;
         }
-        .about-content { flex: 1; min-width: 300px; }
-        .about-content h2 { 
-            color: var(--primary-green); 
-            font-size: 2.5rem; 
+        .about-content { flex: 1; min-width: 260px; }
+        .about-content h2 {
+            color: var(--primary-green);
+            font-size: 2rem;
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 18px;
         }
         .about-content h2::after {
             content: '';
@@ -160,21 +169,21 @@
             right: 0;
             border-radius: 2px;
         }
-        .about-content p { 
-            color: #555; 
-            line-height: 1.8; 
-            font-size: 1.1rem; 
-            margin-bottom: 20px;
+        .about-content p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
         }
         .about-stats {
             display: flex;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 18px;
+            margin-top: 24px;
             flex-wrap: wrap;
         }
         .stat-item {
             text-align: center;
-            padding: 15px;
+            padding: 12px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -182,21 +191,29 @@
             min-width: 120px;
         }
         .stat-item .number {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: bold;
             color: var(--primary-green);
             display: block;
         }
+        .about-image {
+            flex: 0 0 400px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            object-fit: cover;
+        }
 
-        /* 4. شبكة الأقسام (جديد) */
-        .categories-grid { 
-            padding: 80px 8%; 
-            text-align: center; 
+        /* Categories grid */
+        .categories-grid {
+            padding: 70px 8%;
+            text-align: center;
             background: white;
         }
         .section-title {
             color: var(--primary-green);
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 10px;
             position: relative;
             display: inline-block;
@@ -213,200 +230,186 @@
         }
         .section-subtitle {
             color: #777;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
         }
-        .grid-container { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            gap: 20px; 
-            margin-top: 40px; 
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            margin-top: 30px;
         }
         .category-card {
-            background: white; 
-            padding: 30px 20px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
-            transition: 0.4s; 
+            background: white;
+            padding: 22px 16px;
+            border-radius: 18px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.35s;
             border: 1px solid #eee;
             cursor: pointer;
+            text-align: center;
         }
-        .category-card:hover { 
-            transform: translateY(-10px); 
-            background: var(--primary-green); 
-            color: white; 
-            box-shadow: 0 15px 30px rgba(27, 94, 32, 0.2);
-        }
-        .category-card i { 
-            font-size: 3rem; 
-            margin-bottom: 15px; 
-            color: var(--primary-green);
-            transition: 0.4s;
-        }
-        .category-card:hover i { 
+        .category-card:hover {
+            transform: translateY(-8px);
+            background: var(--primary-green);
             color: white;
-            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(27, 94, 32, 0.16);
+        }
+        .category-card i {
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+            color: var(--primary-green);
+            transition: 0.35s;
+        }
+        .category-card:hover i {
+            color: white;
+            transform: scale(1.06);
         }
         .category-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             margin: 0;
         }
 
-        /* 5. قسم العروض والمنتجات المميزة (مُحسن) */
-        .featured-offers { 
-            padding: 80px 8%; 
+        /* Featured offers */
+        .featured-offers {
+            padding: 70px 8%;
             background: #f9f9f9;
             text-align: center;
         }
         .offers-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
         .product-card {
-            border-radius: 20px; 
-            overflow: hidden; 
+            border-radius: 16px;
+            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s; 
+            transition: 0.3s;
             position: relative;
             background: white;
             text-align: right;
         }
-        .product-card:hover { 
-            transform: translateY(-10px); 
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
         }
         .product-img {
-            height: 200px;
             width: 100%;
+            aspect-ratio: 16/9;
             object-fit: cover;
+            display: block;
         }
         .product-content {
-            padding: 20px;
+            padding: 14px;
         }
         .product-title {
-            font-weight: bold;
-            margin-bottom: 10px;
+            font-weight: 700;
+            margin-bottom: 8px;
             color: #333;
         }
         .product-price {
             color: var(--primary-green);
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: flex-start;
         }
         .old-price {
             text-decoration: line-through;
             color: #999;
             font-size: 0.9rem;
-            margin-right: 10px;
         }
-        .offer-badge { 
-            position: absolute; 
-            top: 15px; 
-            right: 15px; 
-            background: var(--accent-orange); 
-            color: white; 
-            padding: 5px 15px; 
+        .offer-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--accent-orange);
+            color: white;
+            padding: 6px 12px;
             border-radius: 10px;
-            font-weight: bold;
-            font-size: 0.9rem;
+            font-weight: 700;
+            font-size: 0.85rem;
         }
         .add-to-cart {
             background: var(--primary-green);
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 14px;
             border-radius: 30px;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: 700;
             width: 100%;
-            transition: 0.3s;
+            transition: 0.25s;
         }
-        .add-to-cart:hover {
-            background: #144015;
-        }
+        .add-to-cart:hover { background: #144015; }
 
-        /* 6. قسم آراء العملاء (جديد) */
+        /* Testimonials */
         .testimonials-section {
-            padding: 80px 8%;
+            padding: 70px 8%;
             background: white;
             text-align: center;
         }
         .testimonials-container {
             display: flex;
             overflow-x: auto;
-            gap: 30px;
+            gap: 18px;
             padding: 20px 0;
             scrollbar-width: thin;
             scrollbar-color: var(--primary-green) #eee;
         }
         .testimonial-card {
-            min-width: 300px;
+            min-width: 280px;
             background: var(--light-bg);
-            border-radius: 20px;
-            padding: 30px;
+            border-radius: 16px;
+            padding: 20px;
             text-align: right;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            flex: 0 0 auto;
         }
         .client-img {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 15px;
-            border: 4px solid var(--accent-orange);
+            margin-bottom: 12px;
+            border: 3px solid var(--accent-orange);
         }
-        .client-name {
-            font-weight: bold;
-            color: var(--primary-green);
-            margin-bottom: 5px;
-        }
-        .client-rating {
-            color: #FFD700;
-            margin-bottom: 15px;
-        }
-        .testimonial-text {
-            color: #555;
-            line-height: 1.6;
-            font-style: italic;
-        }
+        .client-name { font-weight: 700; color: var(--primary-green); margin-bottom: 6px; }
+        .client-rating { color: #FFD700; margin-bottom: 10px; }
+        .testimonial-text { color: #555; line-height: 1.6; font-style: italic; }
 
-        /* 7. قسم الأسئلة الشائعة (جديد) */
+        /* FAQ */
         .faq-section {
-            padding: 80px 8%;
+            padding: 70px 8%;
             background: var(--light-bg);
         }
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .faq-container { max-width: 880px; margin: 0 auto; }
         .faq-item {
             background: white;
             border-radius: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             overflow: hidden;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
         .faq-question {
-            padding: 20px;
-            font-weight: bold;
+            padding: 16px 18px;
+            font-weight: 700;
             color: #333;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: 0.3s;
+            transition: 0.25s;
         }
-        .faq-question:hover {
-            background: #f9f9f9;
-        }
-        .faq-question i {
-            transition: 0.3s;
-        }
+        .faq-question:hover { background: #f9f9f9; }
+        .faq-question i { transition: 0.25s; }
         .faq-answer {
-            padding: 0 20px;
+            padding: 0 18px;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease, padding 0.3s ease;
@@ -414,107 +417,56 @@
             line-height: 1.6;
         }
         .faq-item.active .faq-answer {
-            padding: 20px;
-            max-height: 500px;
+            padding: 14px 18px;
+            max-height: 600px;
         }
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
 
-        /* 8. السياسات وآراء العملاء */
-        .trust-section { 
-            background: var(--primary-green); 
-            color: white; 
-            padding: 60px 8%; 
-            display: flex; 
-            justify-content: space-around; 
-            text-align: center; 
-            flex-wrap: wrap; 
-            gap: 40px;
+        /* Trust & contact & newsletter & footer */
+        .trust-section {
+            background: var(--primary-green);
+            color: white;
+            padding: 50px 8%;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-        .trust-item { 
-            flex: 1;
-            min-width: 200px;
-        }
-        .trust-item i { 
-            font-size: 2.5rem; 
-            margin-bottom: 15px; 
-            color: var(--accent-orange); 
-        }
+        .trust-item { flex: 1; min-width: 180px; }
+        .trust-item i { font-size: 2rem; margin-bottom: 8px; color: var(--accent-orange); }
 
-        /* 9. التواصل والخريطة */
-        .contact-area { 
-            padding: 80px 8%; 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 40px; 
+        .contact-area {
+            padding: 60px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
             background: white;
         }
         .contact-info {
             background: var(--light-bg);
-            padding: 30px;
-            border-radius: 20px;
+            padding: 20px;
+            border-radius: 14px;
         }
-        .contact-info h2 {
-            color: var(--primary-green);
-            margin-bottom: 20px;
-        }
-        .contact-info p {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-            color: #555;
-        }
-        .contact-info i {
-            color: var(--primary-green);
-            width: 25px;
-        }
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: var(--primary-green);
-            color: white;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            transition: 0.3s;
-        }
-        .social-icon:hover {
-            background: var(--accent-orange);
-            transform: translateY(-5px);
-        }
-        iframe { 
-            width: 100%; 
-            height: 350px; 
-            border-radius: 20px; 
-            border: none; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
+        .contact-info h2 { color: var(--primary-green); margin-bottom: 12px; }
+        .contact-info p { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #555; }
+        .contact-info i { color: var(--primary-green); width: 25px; }
 
-        /* 10. قسم النشرة البريدية (جديد) */
         .newsletter-section {
-            padding: 60px 8%;
+            padding: 50px 8%;
             background: linear-gradient(135deg, var(--primary-green), #2e7d32);
             color: white;
             text-align: center;
         }
         .newsletter-form {
-            max-width: 500px;
-            margin: 30px auto 0;
+            max-width: 520px;
+            margin: 20px auto 0;
             display: flex;
             gap: 10px;
         }
         .newsletter-input {
             flex: 1;
-            padding: 15px;
+            padding: 12px;
             border-radius: 30px;
             border: none;
             font-family: 'Cairo', sans-serif;
@@ -524,34 +476,31 @@
             background: var(--accent-orange);
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 12px 22px;
             border-radius: 30px;
-            font-weight: bold;
+            font-weight: 700;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.25s;
         }
-        .newsletter-btn:hover {
-            background: #e68900;
-        }
+        .newsletter-btn:hover { background: #e68900; }
 
-        /* 11. الفوتر المحسن */
-        footer { 
-            background: #111; 
-            color: white; 
-            padding: 50px 8% 20px; 
+        footer {
+            background: #111;
+            color: white;
+            padding: 40px 8% 20px;
         }
         .footer-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
         }
         .footer-col h3 {
             color: white;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 6px;
         }
         .footer-col h3::after {
             content: '';
@@ -562,127 +511,40 @@
             bottom: 0;
             right: 0;
         }
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        .footer-links a {
-            color: #bbb;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .footer-links a:hover {
-            color: var(--accent-orange);
-            padding-right: 5px;
-        }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { color: #bbb; text-decoration: none; transition: 0.25s; }
+        .footer-links a:hover { color: var(--accent-orange); padding-right: 6px; }
         .copyright {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #333;
+            padding-top: 18px;
+            border-top: 1px solid #222;
             color: #bbb;
             font-size: 0.9rem;
         }
 
-        /* 12. زر الواتساب المتحرك */
+        /* WhatsApp & back-to-top & progress */
         .whatsapp-btn {
-            position: fixed; 
-            bottom: 30px; 
-            left: 30px; 
-            background: #25d366; 
-            width: 65px; 
-            height: 65px; 
-            border-radius: 50%; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            color: white; 
-            font-size: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3); 
-            animation: pulse 2s infinite; 
+            position: fixed;
+            bottom: 28px;
+            left: 28px;
+            background: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 26px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
             z-index: 9999;
             text-decoration: none;
-            transition: 0.3s;
+            transition: 0.25s;
         }
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-        }
+        .whatsapp-btn:hover { transform: scale(1.06); }
 
-        /* 13. تحسينات للجوال */
-        @media (max-width: 768px) {
-            header {
-                flex-wrap: wrap;
-                padding: 10px 5%;
-            }
-            .mobile-menu-btn {
-                display: block;
-            }
-            nav {
-                flex-direction: column;
-                width: 100%;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-            }
-            nav.active {
-                max-height: 300px;
-                padding-top: 20px;
-            }
-            nav a {
-                margin: 10px 0;
-                display: block;
-                width: 100%;
-                text-align: center;
-                padding: 10px;
-            }
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .hero p {
-                font-size: 1.2rem;
-            }
-            .about-section, .contact-area {
-                flex-direction: column;
-                grid-template-columns: 1fr;
-            }
-            .about-section img {
-                width: 100%;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-            .newsletter-form {
-                flex-direction: column;
-            }
-        }
-
-        /* الرسوم المتحركة واللمسات النهائية */
-        @keyframes slideUp { 
-            from { 
-                opacity: 0; 
-                transform: translateY(50px); 
-            } 
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
-            } 
-        }
-        @keyframes pulse { 
-            0% { 
-                transform: scale(1); 
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); 
-            } 
-            70% { 
-                transform: scale(1.1); 
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); 
-            } 
-            100% { 
-                transform: scale(1); 
-            } 
-        }
-
-        /* شريط التقدم للتمرير (جديد) */
         .scroll-progress {
             position: fixed;
             top: 0;
@@ -691,14 +553,13 @@
             height: 4px;
             background: var(--accent-orange);
             z-index: 1001;
-            transition: width 0.1s;
+            transition: width 0.12s linear;
         }
 
-        /* زر العودة للأعلى (جديد) */
         .back-to-top {
             position: fixed;
             bottom: 100px;
-            left: 30px;
+            left: 28px;
             background: var(--primary-green);
             width: 50px;
             height: 50px;
@@ -719,32 +580,106 @@
             opacity: 1;
             visibility: visible;
         }
-        .back-to-top:hover {
-            background: #144015;
-            transform: translateY(-5px);
+        .back-to-top:hover { background: #144015; transform: translateY(-5px); }
+
+        /* Animations */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.06); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .about-section { padding: 50px 6%; gap: 22px; }
+            .hero { min-height: 55vh; padding: 3.5rem 6%; }
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                padding: 10px 5%;
+            }
+            .mobile-menu-btn { display: block; }
+            nav {
+                flex-direction: column;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.28s ease, padding 0.28s ease;
+            }
+            nav.active {
+                max-height: 320px;
+                padding-top: 12px;
+            }
+            nav a {
+                margin: 8px 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .hero {
+                padding: 2.2rem 5%;
+                min-height: 48vh;
+            }
+            .hero h1 { font-size: clamp(1.6rem, 6vw, 2.3rem); }
+            .hero p { font-size: 1rem; }
+
+            .about-section {
+                flex-direction: column;
+            }
+            .about-image {
+                flex: 1 1 auto;
+                max-width: 420px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .offers-container {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+
+            .testimonials-container { padding-bottom: 10px; gap: 12px; }
+
+            .contact-area {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-btn { left: 18px; bottom: 18px; width: 56px; height: 56px; font-size: 22px; }
+            .back-to-top { left: 18px; bottom: 86px; }
         }
     </style>
 </head>
 <body>
     <!-- شريط التقدم -->
-    <div class="scroll-progress"></div>
-    
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- زر العودة للأعلى -->
-    <div class="back-to-top">
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
         <i class="fas fa-arrow-up"></i>
-    </div>
+    </button>
+
+    <!-- واتساب -->
+    <a class="whatsapp-btn" href="https://wa.me/967XXXXXXXX" target="_blank" rel="noopener" aria-label="واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <header>
-        <div class="logo">
+        <div class="logo" aria-hidden="true">
             <i class="fas fa-store"></i>
             <span>الهدى الحديث</span>
         </div>
-        
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="فتح القائمة">
             <i class="fas fa-bars"></i>
         </button>
-        
-        <nav id="mainNav">
+
+        <nav id="mainNav" role="navigation">
             <a href="#about">من نحن</a>
             <a href="#categories">الأقسام</a>
             <a href="#offers">العروض</a>
@@ -753,7 +688,7 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" role="banner" aria-label="الهيرو">
         <h1>سوبر ماركت الهدى الحديث</h1>
         <p>من قلب صنعاء، نقدم لكم أجود المنتجات المحلية والعالمية بأفضل الأسعار. نظافة، ثقة، وتوفير دائم.</p>
         <div class="hero-btns">
@@ -765,9 +700,9 @@
     <section class="about-section" id="about">
         <div class="about-content">
             <h2>قصة نجاحنا منذ 2010</h2>
-            <p>تأسس سوبر ماركت الهدى الحديث ليكون الشريك الأول للعائلة اليمنية. نحن نفخر بتوفير بيئة تسوق نظيفة ومنظمة، حيث نهتم بأدق التفاصيل من المزرعة حتى رفوف متجرنا.</p>
+            <p>تأسس سوبر ماركت الهدى الحديث ليكون الشريك الأول للعائلة اليمنية. نحن نفخر بتوفير بيئة تسوق نظيفة ومنظمة، ونسعى دائماً لتقديم أفضل الخدمات والمنتجات.</p>
             <p>رؤيتنا: الريادة في تقديم أفضل تجربة تسوق غذائي في اليمن مع الالتزام بأعلى معايير الجودة العالمية.</p>
-            
+
             <div class="about-stats">
                 <div class="stat-item">
                     <span class="number">+12</span>
@@ -783,34 +718,34 @@
                 </div>
             </div>
         </div>
-        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=500" style="width:400px; border-radius:30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);" alt="متجر الهدى الحديث">
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200" alt="متجر الهدى الحديث" class="about-image">
     </section>
 
     <section class="categories-grid" id="categories">
         <h2 class="section-title">أقسامنا الرئيسية</h2>
         <p class="section-subtitle">نوفر لكم جميع احتياجاتكم اليومية تحت سقف واحد</p>
-        <div class="grid-container">
-            <div class="category-card">
+        <div class="grid-container" aria-label="قائمة الأقسام">
+            <div class="category-card" role="button" tabindex="0">
                 <i class="fas fa-apple-whole"></i>
                 <h3>الخضروات والفواكه</h3>
             </div>
-            <div class="category-card">
+            <div class="category-card" role="button" tabindex="0">
                 <i class="fas fa-drumstick-bite"></i>
                 <h3>اللحوم الطازجة</h3>
             </div>
-            <div class="category-card">
+            <div class="category-card" role="button" tabindex="0">
                 <i class="fas fa-box-open"></i>
                 <h3>المواد التموينية</h3>
             </div>
-            <div class="category-card">
+            <div class="category-card" role="button" tabindex="0">
                 <i class="fas fa-bubbles"></i>
                 <h3>المنظفات والمنزل</h3>
             </div>
-            <div class="category-card">
+            <div class="category-card" role="button" tabindex="0">
                 <i class="fas fa-bread-slice"></i>
                 <h3>المخبوزات الطازجة</h3>
             </div>
-            <div class="category-card">
+            <div class="category-card" role="button" tabindex="0">
                 <i class="fas fa-cheese"></i>
                 <h3>الألبان والأجبان</h3>
             </div>
@@ -820,11 +755,11 @@
     <section class="featured-offers" id="offers">
         <h2 class="section-title">عروض وتخفيضات حصرية</h2>
         <p class="section-subtitle">استفد من أفضل العروض على المنتجات المختارة</p>
-        
+
         <div class="offers-container">
             <div class="product-card">
                 <div class="offer-badge">خصم 20%</div>
-                <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=500&q=80" class="product-img" alt="زيت زيتون">
+                <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=800&q=80" class="product-img" alt="زيت زيتون">
                 <div class="product-content">
                     <h3 class="product-title">زيت زيتون بكر ممتاز</h3>
                     <p>عبوة 2 لتر - إسباني</p>
@@ -835,10 +770,10 @@
                     <button class="add-to-cart">أضف إلى السلة</button>
                 </div>
             </div>
-            
+
             <div class="product-card">
                 <div class="offer-badge">عرض خاص</div>
-                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=500&q=80" class="product-img" alt="أرز بسمتي">
+                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=800&q=80" class="product-img" alt="أرز بسمتي">
                 <div class="product-content">
                     <h3 class="product-title">أرز بسمتي هندي</h3>
                     <p>كيس 5 كجم - أعلى جودة</p>
@@ -849,10 +784,10 @@
                     <button class="add-to-cart">أضف إلى السلة</button>
                 </div>
             </div>
-            
+
             <div class="product-card">
                 <div class="offer-badge">جديد</div>
-                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=500&q=80" class="product-img" alt="قهوة تركية">
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80" class="product-img" alt="قهوة تركية">
                 <div class="product-content">
                     <h3 class="product-title">قهوة تركية ممتازة</h3>
                     <p>عبوة 500 جرام - محمصة حديثاً</p>
@@ -860,10 +795,10 @@
                     <button class="add-to-cart">أضف إلى السلة</button>
                 </div>
             </div>
-            
+
             <div class="product-card">
                 <div class="offer-badge">الأكثر مبيعاً</div>
-                <img src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=500&q=80" class="product-img" alt="تمور">
+                <img src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=800&q=80" class="product-img" alt="تمور">
                 <div class="product-content">
                     <h3 class="product-title">تمور خلاص سكري</h3>
                     <p>كيلو - طازجة من المزرعة</p>
@@ -900,59 +835,41 @@
     <section class="testimonials-section" id="testimonials">
         <h2 class="section-title">آراء عملائنا</h2>
         <p class="section-subtitle">ماذا يقولون عنا</p>
-        
+
         <div class="testimonials-container">
             <div class="testimonial-card">
                 <img src="https://randomuser.me/api/portraits/men/32.jpg" class="client-img" alt="عميل">
                 <div class="client-name">أحمد العزي</div>
                 <div class="client-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-text">
-                    أفضل سوبر ماركت في صنعاء من حيث النظافة والتنظيم. الأسعار معقولة والمنتجات طازجة دائماً. أوصي به بشدة!
-                </p>
+                <p class="testimonial-text">أفضل سوبر ماركت في صنعاء من حيث النظافة والتنظيم. الأسعار معقولة والمنتجات طازجة دائماً.</p>
             </div>
-            
+
             <div class="testimonial-card">
                 <img src="https://randomuser.me/api/portraits/women/44.jpg" class="client-img" alt="عميلة">
                 <div class="client-name">فاطمة محمد</div>
                 <div class="client-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="testimonial-text">
-                    الخدمة ممتازة والتوصيل سريع. منتجاتهم أصلية وموثوقة. أشتري منهم منذ سنوات ولم يخيبوا ظني أبداً.
-                </p>
+                <p class="testimonial-text">الخدمة ممتازة والتوصيل سريع. منتجاتهم أصلية وموثوقة.</p>
             </div>
-            
+
             <div class="testimonial-card">
                 <img src="https://randomuser.me/api/portraits/men/65.jpg" class="client-img" alt="عميل">
                 <div class="client-name">يوسف عبدالله</div>
                 <div class="client-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-text">
-                    التنوع في المنتجات رائع، تجد كل ما تحتاجه في مكان واحد. الموظفون مهذبون والمكان نظيف جداً.
-                </p>
+                <p class="testimonial-text">التنوع في المنتجات رائع، تجد كل ما تحتاجه في مكان واحد. الموظفون مهذبون والمكان نظيف جداً.</p>
             </div>
         </div>
     </section>
 
-    <section class="faq-section">
+    <section class="faq-section" aria-label="الأسئلة الشائعة">
         <h2 class="section-title">أسئلة شائعة</h2>
         <p class="section-subtitle">إجابات على أكثر الأسئلة تكراراً</p>
-        
+
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">
@@ -963,27 +880,27 @@
                     <p>نعمل يومياً من الساعة 7:00 صباحاً حتى الساعة 12:00 منتصف الليل، بما في ذلك العطلات الرسمية.</p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
                     <span>هل تقدمون خدمة التوصيل للمنازل؟</span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>نعم، نقدم خدمة التوصيل المجاني للمنازل عند الشراء بأكثر من 30,000 ريال داخل مدينة صنعاء. للطلبات الأقل، رسوم التوصيل 2,000 ريال.</p>
+                    <p>نعم، نقدم خدمة التوصيل المجاني للمنازل عند الشراء بأكثر من 30,000 ريال داخل مدينة صنعاء.</p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
                     <span>ما هي سياسة الاستبدال والاسترجاع؟</span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>يمكنك استبدال أو استرجاع أي منتج خلال 24 ساعة من الشراء بشرط الاحتفاظ بالفواتير وعدم فتح العبوة في حالة المواد الغذائية المغلقة.</p>
+                    <p>يمكنك استبدال أو استرجاع أي منتج خلال 24 ساعة من الشراء بشرط الاحتفاظ بالفواتير.</p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
                     <span>هل تقبلون الدفع بالبطاقات الائتمانية؟</span>
@@ -997,213 +914,115 @@
     </section>
 
     <section class="newsletter-section">
-        <h2 style="font-size: 2rem; margin-bottom: 10px;">اشترك في نشرتنا البريدية</h2>
-        <p style="font-size: 1.1rem; opacity: 0.9;">كن أول من يعرف عن العروض الحصرية والمنتجات الجديدة</p>
-        
-        <form class="newsletter-form">
-            <input type="email" class="newsletter-input" placeholder="بريدك الإلكتروني" required>
-            <button type="submit" class="newsletter-btn">اشترك الآن</button>
+        <h2 style="font-size: 1.6rem; margin-bottom: 8px;">اشترك في نشرتنا البريدية</h2>
+        <p style="opacity: 0.95;">تابع أحدث العروض والتخفيضات مباشرة إلى بريدك الإلكتروني.</p>
+        <form class="newsletter-form" onsubmit="return false;" aria-label="نموذج الاشتراك">
+            <input type="email" class="newsletter-input" placeholder="بريدك الإلكتروني" required aria-label="البريد الإلكتروني">
+            <button class="newsletter-btn" type="submit">اشترك</button>
         </form>
-    </section>
-
-    <section class="contact-area" id="contact">
-        <div class="contact-info">
-            <h2>تواصل معنا مباشرة</h2>
-            <p><i class="fas fa-location-dot"></i> صنعاء - شارع الخمسين - تقاطع كذا</p>
-            <p><i class="fas fa-phone"></i> 777-XXXXXX</p>
-            <p><i class="fas fa-mobile"></i> 733-XXXXXX</p>
-            <p><i class="fas fa-clock"></i> مفتوح يومياً: 7:00 صباحاً - 12:00 منتصف الليل</p>
-            <p><i class="fas fa-envelope"></i> info@alhuda-modern.com</p>
-            
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-        
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15386.5!2d44.19!3d15.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDIxJzAwLjAiTiA0NMKwMTEnMDAuMCJF!5e0!3m2!1sar!2s!4v1625500000000" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <footer>
         <div class="footer-container">
             <div class="footer-col">
-                <h3>سوبر ماركت الهدى الحديث</h3>
-                <p>وجهتكم الأولى للتسوق في صنعاء منذ 2010. نقدم أجود المنتجات المحلية والعالمية بأفضل الأسعار.</p>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                </div>
+                <h3>حول الهدى الحديث</h3>
+                <p style="color:#bbb;">سوبر ماركت محلي يقدم تشكيلة واسعة من المنتجات الطازجة والتموينية.</p>
             </div>
-            
             <div class="footer-col">
                 <h3>روابط سريعة</h3>
                 <ul class="footer-links">
                     <li><a href="#about">من نحن</a></li>
-                    <li><a href="#categories">الأقسام</a></li>
                     <li><a href="#offers">العروض</a></li>
-                    <li><a href="#testimonials">آراء العملاء</a></li>
                     <li><a href="#contact">تواصل معنا</a></li>
                 </ul>
             </div>
-            
             <div class="footer-col">
-                <h3>خدماتنا</h3>
-                <ul class="footer-links">
-                    <li><a href="#">التوصيل للمنازل</a></li>
-                    <li><a href="#">الطلبات عبر الهاتف</a></li>
-                    <li><a href="#">التخفيضات الأسبوعية</a></li>
-                    <li><a href="#">برنامج الولاء</a></li>
-                    <li><a href="#">حجز المنتجات</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h3>معلومات قانونية</h3>
-                <ul class="footer-links">
-                    <li><a href="#">شروط الخدمة</a></li>
-                    <li><a href="#">سياسة الخصوصية</a></li>
-                    <li><a href="#">سياسة الاستبدال</a></li>
-                    <li><a href="#">الأسئلة الشائعة</a></li>
-                    <li><a href="#">الشكاوى والمقترحات</a></li>
-                </ul>
+                <h3>تواصل</h3>
+                <p style="color:#bbb;">الهاتف: 01-XXXXXXX</p>
+                <p style="color:#bbb;">العنوان: صنعاء، اليمن</p>
             </div>
         </div>
-        
-        <div class="copyright">
-            <p>© 2024 سوبر ماركت الهدى الحديث | جميع الحقوق محفوظة</p>
-            <p>صنعاء - اليمن | هاتف: 777-XXXXXX | البريد الإلكتروني: info@alhuda-modern.com</p>
-        </div>
+        <div class="copyright">© 2026 الهدى الحديث. جميع الحقوق محفوظة.</div>
     </footer>
 
-    <a href="https://wa.me/967770000000" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <script>
-        // القائمة المتنقلة
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mainNav = document.getElementById('mainNav');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // إغلاق القائمة عند النقر على رابط
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mainNav.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        // قائمة الجوال
+        (function() {
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const nav = document.getElementById('mainNav');
+            mobileBtn.addEventListener('click', () => {
+                const open = nav.classList.toggle('active');
+                mobileBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                // تبديل أيقونة
+                const icon = mobileBtn.querySelector('i');
+                if (open) { icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark'); }
+                else { icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars'); }
             });
-        });
-        
-        // الأسئلة الشائعة (FAQ)
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                item.classList.toggle('active');
+            // إغلاق القائمة عند النقر على رابط (مفيد للجوال)
+            nav.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        mobileBtn.setAttribute('aria-expanded', 'false');
+                        const icon = mobileBtn.querySelector('i');
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
             });
-        });
-        
-        // شريط التقدم
-        const scrollProgress = document.querySelector('.scroll-progress');
-        const backToTopBtn = document.querySelector('.back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (window.scrollY / windowHeight) * 100;
-            scrollProgress.style.width = scrolled + '%';
-            
-            // زر العودة للأعلى
-            if (window.scrollY > 500) {
-                backToTopBtn.classList.add('active');
-            } else {
-                backToTopBtn.classList.remove('active');
+        })();
+
+        // شريط التقدم و زر العودة للأعلى
+        (function() {
+            const progress = document.getElementById('scrollProgress');
+            const backToTop = document.getElementById('backToTop');
+            function onScroll() {
+                const doc = document.documentElement;
+                const scrollTop = window.scrollY || doc.scrollTop;
+                const height = doc.scrollHeight - window.innerHeight;
+                const pct = height > 0 ? (scrollTop / height) * 100 : 0;
+                progress.style.width = pct + '%';
+                if (scrollTop > 300) backToTop.classList.add('active');
+                else backToTop.classList.remove('active');
             }
-        });
-        
-        // زر العودة للأعلى
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            window.addEventListener('scroll', onScroll, { passive: true });
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            // initial
+            onScroll();
+        })();
+
+        // أسئلة شائعة - Toggle
+        (function() {
+            document.querySelectorAll('.faq-item .faq-question').forEach(q => {
+                q.addEventListener('click', () => {
+                    const item = q.parentElement;
+                    item.classList.toggle('active');
+                });
             });
-        });
-        
-        // تأثيرات التمرير الناعم
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // إضافة منتجات إلى السلة
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', function() {
-                const productCard = this.closest('.product-card');
-                const productName = productCard.querySelector('.product-title').textContent;
-                const productPrice = productCard.querySelector('.product-price').textContent;
-                
-                // تأثير بصري عند الإضافة
-                this.innerHTML = '<i class="fas fa-check"></i> تمت الإضافة';
-                this.style.background = '#4CAF50';
-                
-                setTimeout(() => {
-                    this.innerHTML = 'أضف إلى السلة';
-                    this.style.background = 'var(--primary-green)';
-                }, 2000);
-                
-                // يمكن هنا إضافة المنتج إلى سلة التسوق
-                console.log(`تمت إضافة ${productName} بسعر ${productPrice} إلى السلة`);
-            });
-        });
-        
-        // نموذج النشرة البريدية
-        const newsletterForm = document.querySelector('.newsletter-form');
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const emailInput = this.querySelector('.newsletter-input');
-            const submitBtn = this.querySelector('.newsletter-btn');
-            
-            if (emailInput.value) {
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> تم الاشتراك';
-                submitBtn.style.background = '#4CAF50';
-                
-                setTimeout(() => {
-                    submitBtn.innerHTML = 'اشترك الآن';
-                    submitBtn.style.background = 'var(--accent-orange)';
-                    emailInput.value = '';
-                    alert('شكراً لاشتراكك في نشرتنا البريدية!');
-                }, 2000);
+        })();
+
+        // تحسين سلوك الأخبار التمرير للـ testimonials (touch smooth)
+        (function() {
+            const t = document.querySelector('.testimonials-container');
+            if (t) {
+                let isDown = false, startX, scrollLeft;
+                t.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    t.classList.add('active-drag');
+                    startX = e.pageX - t.offsetLeft;
+                    scrollLeft = t.scrollLeft;
+                });
+                t.addEventListener('mouseleave', () => { isDown = false; t.classList.remove('active-drag'); });
+                t.addEventListener('mouseup', () => { isDown = false; t.classList.remove('active-drag'); });
+                t.addEventListener('mousemove', (e) => {
+                    if(!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - t.offsetLeft;
+                    const walk = (x - startX) * 1; //scroll-fast
+                    t.scrollLeft = scrollLeft - walk;
+                });
             }
-        });
-        
-        // تحميل الصفحة
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s';
-            
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
-        });
+        })();
     </script>
 </body>
-</html>
 </html>
