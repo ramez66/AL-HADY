@@ -1,0 +1,24 @@
+@media (max-width: 992px) {
+    .about-section { padding: 50px 6%; gap: 22px; }
+    .hero { min-height: 55vh; padding: 3.5rem 6%; }
+}
+@media (max-width: 768px) {
+    header { flex-wrap: wrap; padding: 10px 5%; }
+    .mobile-menu-btn { display: block; }
+    nav {
+        flex-direction: column; width: 100%; max-height: 0; overflow: hidden;
+        transition: max-height 0.28s ease, padding 0.28s ease;
+    }
+    nav.active { max-height: 320px; padding-top: 12px; }
+    nav a { margin: 8px 0; display: block; width: 100%; text-align: center; padding: 10px 0; }
+    .hero { padding: 2.2rem 5%; min-height: 48vh; }
+    .hero h1 { font-size: clamp(1.6rem, 6vw, 2.3rem); }
+    .hero p { font-size: 1rem; }
+    .about-section { flex-direction: column; }
+    .about-image { flex: 1 1 auto; max-width: 420px; width: 100%; margin: 0 auto; }
+    .offers-container { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .testimonials-container { padding-bottom: 10px; gap: 12px; }
+    .contact-area { grid-template-columns: 1fr; }
+    .whatsapp-btn { left: 18px; bottom: 18px; width: 56px; height: 56px; font-size: 22px; }
+    .back-to-top { left: 18px; bottom: 86px; }
+}

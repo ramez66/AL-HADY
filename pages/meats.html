@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اللحوم الطازجة - الهدى الحديث</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link href="./assets/css/font.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- شريط التقدم -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- زر العودة للأعلى -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header>
+   <div class="logo" aria-hidden="true">
+            <i class="fas fa-store"></i>
+            <span>الهدى الحديث</span>
+        </div>
+
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="فتح القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="mainNav" role="navigation">
+            <a href="#about">من نحن</a>
+            <a href="#categories">الأقسام</a>
+            <a href="#offers">العروض</a>
+            <a href="#testimonials">آراء العملاء</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="meats-page">
+        <!-- قسم الهيرو للحوم -->
+        <section class="meats-hero">
+            <div class="hero-content">
+                <h1><i class="fas fa-drumstick-bite"></i> قسم اللحوم الطازجة</h1>
+                <p>لحوم طازجة يومياً من مصادر موثوقة، ذبيحة حسب الشريعة الإسلامية</p>
+                <div class="hero-features">
+                    <span><i class="fas fa-check-circle"></i> لحوم مبردة طازجة</span>
+                    <span><i class="fas fa-check-circle"></i> ذبيحة إسلامية</span>
+                    <span><i class="fas fa-check-circle"></i> توصيل سريع</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- معلومات حول جودة اللحوم -->
+        <section class="quality-section">
+            <div class="quality-content">
+                <h2><i class="fas fa-award"></i> ضمان الجودة</h2>
+                <div class="quality-grid">
+                    <div class="quality-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>فحص بيطري</h3>
+                        <p>جميع اللحوم تخضع للفحص البيطري قبل التبريد</p>
+                    </div>
+                    <div class="quality-card">
+                        <i class="fas fa-snowflake"></i>
+                        <h3>سلسلة التبريد</h3>
+                        <p>نحافظ على سلسلة التبريد من المزرعة حتى منزلك</p>
+                    </div>
+                    <div class="quality-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>تغذية طبيعية</h3>
+                        <p>ماشية تتغذى على الأعلاف الطبيعية</p>
+                    </div>
+                    <div class="quality-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>ذبيحة يومية</h3>
+                        <p>ذبيحة يومية للحفاظ على الطزاجة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- أنواع اللحوم -->
+        <section class="meat-types">
+            <h2 class="section-title">أنواع اللحوم المتوفرة</h2>
+            <p class="section-subtitle">اختر ما يناسبك من تشكيلتنا الواسعة</p>
+
+            <div class="type-filters">
+                <button class="filter-btn active" data-type="all">جميع الأنواع</button>
+                <button class="filter-btn" data-type="beef">لحوم البقر</button>
+                <button class="filter-btn" data-type="lamb">لحوم الضأن</button>
+                <button class="filter-btn" data-type="chicken">الدواجن</button>
+                <button class="filter-btn" data-type="fish">الأسماك</button>
+                <button class="filter-btn" data-type="processed">لحوم مصنعة</button>
+            </div>
+
+            <div class="meats-grid" id="meatsGrid">
+                <!-- سيتم تحميل المنتجات ديناميكياً -->
+            </div>
+        </section>
+
+        <!-- نصائح للحوم -->
+        <section class="meat-tips">
+            <div class="tips-container">
+                <div class="tips-content">
+                    <h2><i class="fas fa-lightbulb"></i> نصائح لاختيار اللحوم</h2>
+                    <div class="tips-list">
+                        <div class="tip-item">
+                            <div class="tip-number">1</div>
+                            <div class="tip-text">
+                                <h3>لون اللحم</h3>
+                                <p>اللحم الطازج يكون لونه أحمر زاهي، وليس داكناً أو باهتاً</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-number">2</div>
+                            <div class="tip-text">
+                                <h3>الملمس</h3>
+                                <p>يجب أن يكون ملمس اللحم متماسكاً ومرناً عند الضغط عليه</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-number">3</div>
+                            <div class="tip-text">
+                                <h3>الرائحة</h3>
+                                <p>اللحم الطازج ليس له رائحة قوية أو كريهة</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-number">4</div>
+                            <div class="tip-text">
+                                <h3>التخزين</h3>
+                                <p>احفظ اللحوم في أبرد جزء من الثلاجة واستخدمها خلال يومين</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tips-image">
+                    <img src="../assets/images/meat-tips.jpg" alt="نصائح للحوم">
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التقطيع والتجهيز -->
+        <section class="cutting-section">
+            <h2 class="section-title">خدمات التقطيع والتجهيز</h2>
+            <p class="section-subtitle">نوفر لك خدمات تقطيع وتجهيز حسب طلبك</p>
+
+            <div class="cutting-options">
+                <div class="cutting-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>تقطيع عادي</h3>
+                    <p>تقطيع إلى قطع متوسطة تناسب الطبخ</p>
+                </div>
+                <div class="cutting-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>تقطيع للشوي</h3>
+                    <p>تقطيع شرائح رفيعة للشوي والمشاوي</p>
+                </div>
+                <div class="cutting-card">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h3>تجهيز كباب</h3>
+                    <p>فرم وتتبيل اللحم لتحضير الكباب</p>
+                </div>
+                <div class="cutting-card">
+                    <i class="fas fa-mortar-pestle"></i>
+                    <h3>فرم ناعم</h3>
+                    <p>فرم ناعم لتحضير البرغر والكفتة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- جدول الأسعار -->
+        <section class="price-table-section">
+            <h2 class="section-title">أسعار اللحوم</h2>
+            <p class="section-subtitle">أسعارنا تنافسية مع ضمان الجودة</p>
+
+            <div class="price-table-container">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>نوع اللحم</th>
+                            <th>الوصف</th>
+                            <th>السعر (لكيلو)</th>
+                            <th>الحالة</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="priceTableBody">
+                        <!-- سيتم تعبئة الجدول ديناميكياً -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة للحوم -->
+        <section class="meat-faq">
+            <h2 class="section-title">أسئلة شائعة عن اللحوم</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كيف أحفظ اللحوم بشكل صحيح؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>للحفظ في الثلاجة: ضع اللحم في وعاء محكم الغلق واستخدمه خلال يومين. للتفريز: قسم الكمية إلى أجزاء صغيرة، ضع كل جزء في كيس تفريز محكم، واحرص على إخراج الهواء تماماً. يمكن حفظ اللحم المفروم 3-4 أشهر، والقطع الكبيرة 6-12 شهراً.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما الفرق بين اللحوم المبردة والمجمدة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>اللحوم المبردة: تحفظ في درجة حرارة 0-4° مئوية، وتكون طازجة لمدة 2-3 أيام. اللحوم المجمدة: تحفظ في درجة حرارة -18° مئوية أو أقل، ويمكن حفظها لشهور لكن قد تفقد بعض النكهة والرطوبة بعد الذوبان.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل لديكم لحوم خالية من الهرمونات؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، لدينا قسم خاص بلحوم المزارع العضوية التي تتغذى على أعلاف طبيعية بدون هرمونات أو مضادات حيوية. هذه اللحوم تحمل شهادة جودة خاصة وهي متوفرة بأسعار أعلى قليلاً.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما هو أفضل وقت لشراء اللحوم؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نوصي بشراء اللحوم في الصباح الباكر حيث تكون الذبيحة حديثة. كما نستقبل ذبيحة جديدة يومياً الساعة 6 صباحاً. للحوم الخاصة بالمناسبات، ننصح بالطلب المسبق لضمان توفر الكمية والنوعية المطلوبة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الطلب السريع -->
+        <section class="quick-order">
+            <div class="quick-order-container">
+                <div class="order-info">
+                    <h2><i class="fas fa-bolt"></i> طلب سريع للحوم</h2>
+                    <p>اطلب لحومك الآن وسنوصلها إليك خلال ساعتين في صنعاء</p>
+                    <div class="order-features">
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>توصيل سريع</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>دفع عند الاستلام</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-redo"></i>
+                            <span>استبدال مجاني</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-form">
+                    <h3>اطلب الآن</h3>
+                    <form id="quickOrderForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="اسمك الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="رقم هاتفك" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">اختر نوع اللحم</option>
+                                <option value="beef">لحم بقر</option>
+                                <option value="lamb">لحم ضأن</option>
+                                <option value="chicken">دجاج</option>
+                                <option value="fish">أسماك</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="الكمية (كجم)" min="0.5" step="0.5" required>
+                        </div>
+                        <button type="submit" class="btn-order">أطلب الآن</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>حول الهدى الحديث</h3>
+                <p style="color:#bbb;">سوبر ماركت محلي يقدم تشكيلة واسعة من المنتجات الطازجة والتموينية.</p>
+            </div>
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#offers">العروض</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>تواصل</h3>
+                <p style="color:#bbb;">الهاتف: 01-XXXXXXX</p>
+                <p style="color:#bbb;">العنوان: صنعاء، اليمن</p>
+            </div>
+        </div>
+        <div class="copyright">© 2026 الهدى الحديث. جميع الحقوق محفوظة.</div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/meats.js"></script>
+</body>
+</html>

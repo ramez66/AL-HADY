@@ -1,0 +1,1369 @@
+/* تنسيقات خاصة بصفحة الخضروات والفواكه */
+
+.vegetables-page {
+    background-color: #f8fff8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* هيرو الخضروات */
+.vegetables-hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    color: white;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.vegetables-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/vegetables/pattern.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.hero-content {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.hero-content h1 i {
+    font-size: 2.5rem;
+    color: #ffeb3b;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    max-width: 600px;
+}
+
+.hero-features {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.hero-features span {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-features span:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-features i {
+    color: #ffeb3b;
+}
+
+.hero-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotateY(-10deg);
+    transition: transform 0.5s;
+}
+
+.hero-image:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* القسم الموسمي */
+.seasonal-section {
+    padding: 3rem 2rem;
+    background: white;
+}
+
+.seasonal-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.seasonal-header h2 {
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.seasonal-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.seasonal-categories {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.seasonal-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1.5rem;
+    background: #f8fff8;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    min-width: 120px;
+}
+
+.seasonal-category:hover {
+    transform: translateY(-5px);
+    border-color: #2e7d32;
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.1);
+}
+
+.seasonal-category.active {
+    background: #2e7d32;
+    color: white;
+    border-color: #2e7d32;
+}
+
+.seasonal-category i {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.seasonal-category.active i {
+    color: white;
+}
+
+.seasonal-category span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* قسم التصفية */
+.filter-section {
+    padding: 2rem;
+    background: #f1f8e9;
+    border-radius: 15px;
+    margin: 2rem;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+.filter-group h3 {
+    color: #2e7d32;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.8rem;
+    background: white;
+    border: 2px solid #c8e6c9;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.filter-btn:hover {
+    border-color: #2e7d32;
+    color: #2e7d32;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #2e7d32;
+    border-color: #2e7d32;
+    color: white;
+}
+
+.sort-select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #c8e6c9;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #555;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+/* شبكة المنتجات */
+.products-grid-section {
+    padding: 3rem 2rem;
+    min-height: 500px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    position: relative;
+    border: 1px solid #e8f5e9;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(46, 125, 50, 0.15);
+    border-color: #2e7d32;
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    z-index: 2;
+    color: white;
+}
+
+.badge-organic {
+    background: #4caf50;
+}
+
+.badge-new {
+    background: #ff9800;
+}
+
+.badge-sale {
+    background: #f44336;
+}
+
+.badge-popular {
+    background: #2196f3;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.product-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.product-unit {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 3px;
+}
+
+.product-origin {
+    background: #e8f5e9;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: #2e7d32;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.qty-btn {
+    width: 40px;
+    height: 40px;
+    background: #f1f8e9;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #2e7d32;
+    transition: background 0.3s;
+}
+
+.qty-btn:hover {
+    background: #c8e6c9;
+}
+
+.qty-input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #c8e6c9;
+    border-right: 1px solid #c8e6c9;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.btn-add-to-cart {
+    flex: 1;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-add-to-cart:hover {
+    background: #1b5e20;
+}
+
+.btn-add-to-cart i {
+    font-size: 1.1rem;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 3rem;
+    color: #2e7d32;
+    display: none;
+}
+
+.loading-spinner.active {
+    display: block;
+}
+
+.loading-spinner i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.no-products {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #666;
+}
+
+.no-products i {
+    font-size: 4rem;
+    color: #c8e6c9;
+    margin-bottom: 1rem;
+}
+
+.no-products h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+/* قسم العروض الخاصة */
+.specials-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+}
+
+.specials-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.specials-header h2 {
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.specials-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.specials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.special-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.special-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(46, 125, 50, 0.15);
+}
+
+.special-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #f44336;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(244, 67, 54, 0.3);
+}
+
+.special-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.special-content {
+    padding: 1.8rem;
+}
+
+.special-content h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.special-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.special-price {
+    margin-bottom: 1.5rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.new-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.btn-special {
+    width: 100%;
+    padding: 1rem;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.1rem;
+}
+
+.btn-special:hover {
+    background: #f57c00;
+}
+
+/* قسم الفوائد الصحية */
+.benefits-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.benefits-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.benefits-header h2 {
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.benefits-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.benefits-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.benefits-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 1.2rem 1.5rem;
+    background: #f8fff8;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    min-width: 120px;
+}
+
+.benefits-tab:hover {
+    border-color: #2e7d32;
+    transform: translateY(-3px);
+}
+
+.benefits-tab.active {
+    background: #2e7d32;
+    color: white;
+    border-color: #2e7d32;
+}
+
+.benefits-tab i {
+    font-size: 1.8rem;
+}
+
+.benefits-tab span {
+    font-weight: 600;
+}
+
+.benefits-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    display: none;
+    background: #f1f8e9;
+    border-radius: 15px;
+    padding: 2.5rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.benefit-item.active {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.benefit-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon i {
+    font-size: 2.5rem;
+    color: #2e7d32;
+}
+
+.benefit-text {
+    flex: 1;
+}
+
+.benefit-text h3 {
+    color: #2e7d32;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.benefit-products {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-products li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+    color: #444;
+    font-size: 1.05rem;
+}
+
+.benefit-products i {
+    color: #4caf50;
+    width: 20px;
+}
+
+/* قسم نصائح الطزاجة */
+.freshness-tips {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.tips-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tips-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tips-header h2 {
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tips-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tip-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    border-color: #2e7d32;
+    box-shadow: 0 15px 30px rgba(46, 125, 50, 0.1);
+}
+
+.tip-icon {
+    width: 70px;
+    height: 70px;
+    background: #f1f8e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.tip-icon i {
+    font-size: 2rem;
+    color: #2e7d32;
+}
+
+.tip-card h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.tip-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* قسم التخزين */
+.storage-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.storage-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.storage-header h2 {
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.storage-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.storage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.storage-card {
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.storage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.storage-card.fridge {
+    background: #e3f2fd;
+    border-color: #2196f3;
+}
+
+.storage-card.room {
+    background: #fff3e0;
+    border-color: #ff9800;
+}
+
+.storage-card.freezer {
+    background: #f3e5f5;
+    border-color: #9c27b0;
+}
+
+.storage-icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.storage-card.fridge .storage-icon {
+    color: #2196f3;
+}
+
+.storage-card.room .storage-icon {
+    color: #ff9800;
+}
+
+.storage-card.freezer .storage-icon {
+    color: #9c27b0;
+}
+
+.storage-icon i {
+    font-size: 1.8rem;
+}
+
+.storage-card h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.storage-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.storage-card li {
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.storage-card li:before {
+    content: "✓";
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.storage-card li:last-child {
+    border-bottom: none;
+}
+
+/* الأسئلة الشائعة */
+.vegetables-faq {
+    padding: 4rem 2rem;
+    background: #f8fff8;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-header h2 {
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.faq-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e8f5e9;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    background: white;
+    color: #2e7d32;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #f1f8e9;
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    background: #f8fff8;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    color: #555;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* الباقة الأسبوعية */
+.weekly-basket {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    color: white;
+}
+
+.basket-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.basket-content {
+    flex: 1;
+}
+
+.basket-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.basket-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.basket-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.basket-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.basket-features i {
+    color: #ffeb3b;
+}
+
+.basket-price {
+    margin-bottom: 2rem;
+}
+
+.old-price {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    opacity: 0.7;
+    margin-left: 1rem;
+}
+
+.new-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+.btn-basket {
+    padding: 1.2rem 3rem;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-basket:hover {
+    background: #f57c00;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.basket-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.basket-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* الفوتر */
+.vegetables-footer {
+    background: #1b5e20;
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.vegetables-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vegetables-footer .footer-col h3 {
+    color: #ffeb3b;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.vegetables-footer .footer-col p {
+    color: #c8e6c9;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-social a:hover {
+    background: #4caf50;
+    transform: translateY(-3px);
+}
+
+.vegetables-footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.vegetables-footer .footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.vegetables-footer .footer-links a {
+    color: #c8e6c9;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vegetables-footer .footer-links a:hover {
+    color: #ffeb3b;
+}
+
+.vegetables-footer .footer-links a.active {
+    color: #ffeb3b;
+    font-weight: 600;
+}
+
+.delivery-times {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.delivery-times li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #c8e6c9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery-times li:last-child {
+    border-bottom: none;
+}
+
+.delivery-times span {
+    color: #ffeb3b;
+    font-weight: 600;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+}
+
+.contact-info i {
+    color: #ffeb3b;
+    width: 20px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #c8e6c9;
+    font-size: 0.9rem;
+}
+
+/* التجاوب مع الشاشات المختلفة */
+@media (max-width: 1200px) {
+    .vegetables-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .hero-content h1 {
+        justify-content: center;
+    }
+    
+    .hero-features {
+        justify-content: center;
+    }
+    
+    .basket-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .benefit-item.active {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .vegetables-hero {
+        padding: 3rem 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .seasonal-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .seasonal-category {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .filter-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .filter-group {
+        min-width: 100%;
+    }
+    
+    .specials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .storage-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .benefits-tab {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .weekly-basket {
+        padding: 3rem 1rem;
+    }
+    
+    .basket-content h2 {
+        font-size: 2rem;
+    }
+    
+    .new-price {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-features span {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .product-actions {
+        flex-direction: column;
+    }
+    
+    .quantity-selector {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

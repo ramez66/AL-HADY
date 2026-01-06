@@ -1,0 +1,1370 @@
+/* تنسيقات خاصة بصفحة المخبوزات الطازجة */
+
+.bakery-page {
+    background-color: #fffaf0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* هيرو المخبوزات */
+.bakery-hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #d4a574 0%, #bc8a5f 100%);
+    color: white;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.bakery-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bakery/pattern.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.hero-content {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.hero-content h1 i {
+    font-size: 2.5rem;
+    color: #ffd166;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    max-width: 600px;
+}
+
+.hero-features {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.hero-features span {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-features span:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-features i {
+    color: #ffd166;
+}
+
+.hero-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateY(-10deg);
+    transition: transform 0.5s;
+}
+
+.hero-image:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* أنواع المخبوزات */
+.bakery-types {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.types-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.types-header h2 {
+    font-size: 2.2rem;
+    color: #d4a574;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.types-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.type-card {
+    background: #fffaf0;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4a574;
+    box-shadow: 0 10px 20px rgba(212, 165, 116, 0.15);
+}
+
+.type-card.active {
+    background: #d4a574;
+    color: white;
+    border-color: #d4a574;
+}
+
+.type-card.active .type-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.type-icon {
+    width: 60px;
+    height: 60px;
+    background: #f8f3e9;
+    color: #d4a574;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+}
+
+.type-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* البحث والتصفية */
+.bakery-filter {
+    padding: 2rem;
+    background: #f8f3e9;
+    border-radius: 15px;
+    margin: 2rem;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter-group h3 {
+    color: #d4a574;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.8rem;
+    background: white;
+    border: 2px solid #e9d8c4;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #8b7355;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: #d4a574;
+    color: #d4a574;
+}
+
+.filter-btn.active {
+    background: #d4a574;
+    border-color: #d4a574;
+    color: white;
+}
+
+.sort-group {
+    min-width: 250px;
+}
+
+.sort-select {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid #e9d8c4;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #8b7355;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23d4a574' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 1.5rem center;
+    background-size: 12px;
+    padding-left: 3rem;
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: #d4a574;
+}
+
+/* قسم المنتجات */
+.bakery-products {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.products-header h2 {
+    font-size: 2.2rem;
+    color: #d4a574;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.freshness-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff0e6;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    color: #ff6b35;
+    font-weight: 600;
+}
+
+.freshness-indicator i {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.product-card {
+    background: #fffaf0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    border: 2px solid #f8f3e9;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(212, 165, 116, 0.15);
+    border-color: #d4a574;
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    z-index: 2;
+    color: white;
+}
+
+.badge-fresh {
+    background: #4caf50;
+}
+
+.badge-hot {
+    background: #ff6b35;
+}
+
+.badge-new {
+    background: #2196f3;
+}
+
+.badge-special {
+    background: #9c27b0;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #f8f3e9;
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    color: #8b7355;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.product-type {
+    color: #d4a574;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.product-freshness {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #4caf50;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.product-description {
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.product-weight {
+    background: #f8f3e9;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: #8b7355;
+    font-weight: 600;
+}
+
+.product-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.current-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d4a574;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.1rem;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e9d8c4;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.qty-btn {
+    width: 40px;
+    height: 40px;
+    background: #f8f3e9;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #d4a574;
+    transition: background 0.3s;
+}
+
+.qty-btn:hover {
+    background: #e9d8c4;
+}
+
+.qty-input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #e9d8c4;
+    border-right: 1px solid #e9d8c4;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.btn-add-cart {
+    flex: 1;
+    background: #d4a574;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-add-cart:hover {
+    background: #bc8a5f;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 3rem;
+    color: #d4a574;
+    display: none;
+}
+
+.loading-spinner.active {
+    display: block;
+}
+
+.spinner i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.no-products {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #666;
+    display: none;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    color: #e9d8c4;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: #d4a574;
+    margin-bottom: 0.5rem;
+}
+
+.baking-schedule {
+    background: #f8f3e9;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 3rem;
+}
+
+.baking-schedule h3 {
+    color: #8b7355;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+}
+
+.schedule-slots {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.time-slot {
+    flex: 1;
+    min-width: 150px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.time-slot:hover {
+    border-color: #d4a574;
+    transform: translateY(-3px);
+}
+
+.time-slot.active {
+    background: #d4a574;
+    color: white;
+    border-color: #d4a574;
+}
+
+.time-slot.active .time {
+    color: white;
+}
+
+.time-slot.active .label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.time {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4a574;
+    margin-bottom: 0.5rem;
+}
+
+.label {
+    display: block;
+    color: #666;
+    font-weight: 600;
+}
+
+/* قسم العروض الخاصة */
+.bakery-offers {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #fff0e6 0%, #ffd7ba 100%);
+}
+
+.offers-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.offers-header h2 {
+    font-size: 2.2rem;
+    color: #d4a574;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.offers-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.offers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offer-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.offer-card.main-offer {
+    grid-column: span 2;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(212, 165, 116, 0.15);
+}
+
+.offer-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.offer-card:first-child .offer-badge {
+    background: #ff6b35;
+}
+
+.offer-card:nth-child(2) .offer-badge {
+    background: #4caf50;
+}
+
+.offer-card:nth-child(3) .offer-badge {
+    background: #2196f3;
+}
+
+.offer-content h3 {
+    color: #8b7355;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.offer-desc {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.offer-price {
+    margin-bottom: 1.5rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.new-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d4a574;
+}
+
+.offer-timer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ff6b35;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+#offerTimer {
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+.btn-offer {
+    width: 100%;
+    padding: 1rem;
+    background: #d4a574;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.1rem;
+}
+
+.btn-offer:hover {
+    background: #bc8a5f;
+}
+
+.offer-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* قسم المخبوزات التقليدية */
+.traditional-bakery {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.traditional-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.traditional-header h2 {
+    font-size: 2.2rem;
+    color: #8b7355;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.traditional-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.traditional-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.traditional-item {
+    background: #fffaf0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.traditional-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(139, 115, 85, 0.15);
+}
+
+.item-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.traditional-item:hover .item-image img {
+    transform: scale(1.05);
+}
+
+.item-content {
+    padding: 1.5rem;
+}
+
+.item-content h3 {
+    color: #8b7355;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.item-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.item-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4a574;
+    text-align: left;
+}
+
+/* قسم الطلبات المسبقة */
+.pre-order {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #8b7355 0%, #6b5c43 100%);
+    color: white;
+}
+
+.pre-order-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pre-order-content {
+    flex: 1;
+}
+
+.pre-order-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.pre-order-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.pre-order-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.pre-order-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.pre-order-features i {
+    color: #ffd166;
+}
+
+.pre-order-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.pre-order-notice i {
+    color: #ffd166;
+    margin-top: 3px;
+}
+
+.pre-order-notice p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.pre-order-form {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.pre-order-form h3 {
+    color: #8b7355;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+}
+
+.pre-order-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.pre-order-form input,
+.pre-order-form select,
+.pre-order-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e9d8c4;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+.pre-order-form input:focus,
+.pre-order-form select:focus,
+.pre-order-form textarea:focus {
+    outline: none;
+    border-color: #d4a574;
+}
+
+.btn-pre-order {
+    width: 100%;
+    padding: 1.2rem;
+    background: #d4a574;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-pre-order:hover {
+    background: #bc8a5f;
+}
+
+/* قسم نصائح التخزين */
+.storage-tips {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.storage-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.storage-header h2 {
+    font-size: 2.2rem;
+    color: #8b7355;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.storage-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.storage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.storage-tip {
+    background: #f8f3e9;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.storage-tip:hover {
+    border-color: #d4a574;
+    transform: translateY(-5px);
+}
+
+.tip-icon {
+    width: 70px;
+    height: 70px;
+    background: #d4a574;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.tip-icon i {
+    font-size: 2rem;
+}
+
+.storage-tip h3 {
+    color: #8b7355;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.storage-tip p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* الأسئلة الشائعة */
+.bakery-faq {
+    padding: 4rem 2rem;
+    background: #f8f3e9;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-header h2 {
+    font-size: 2.2rem;
+    color: #8b7355;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.faq-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9d8c4;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    background: white;
+    color: #8b7355;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #f8f3e9;
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    background: white;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    color: #555;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* قسم التوصيل الساخن */
+.hot-delivery {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+    color: white;
+}
+
+.delivery-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.delivery-content {
+    flex: 1;
+}
+
+.delivery-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.delivery-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.delivery-features {
+    margin-bottom: 2rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #ffd166;
+    min-width: 40px;
+}
+
+.feature h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: white;
+}
+
+.feature p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.btn-delivery {
+    padding: 1.2rem 3rem;
+    background: white;
+    color: #ff6b35;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-delivery:hover {
+    background: #ffd166;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.delivery-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.delivery-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* الفوتر */
+.bakery-footer {
+    background: #8b7355;
+    color: white;
+    padding: 3rem 2rem 0;
+}
+
+.bakery-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bakery-footer .footer-col h3 {
+    color: #ffd166;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.bakery-footer .footer-col p {
+    color: #e9d8c4;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.footer-hours h4 {
+    color: #ffd166;
+    margin-bottom: 0.5rem;
+}
+
+.bakery-footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.bakery-footer .footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.bakery-footer .footer-links a {
+    color: #e9d8c4;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bakery-footer .footer-links a:hover {
+    color: #ffd166;
+}
+
+.bakery-footer .footer-links a.active {
+    color: #ffd166;
+    font-weight: 600;
+}
+
+.contact-info {
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+}
+
+.contact-info i {
+    color: #ffd166;
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e9d8c4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd166;
+}
+
+.social-links i {
+    font-size: 1.2rem;
+}
+
+.quick-tips p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.quick-tips i {
+    color: #ffd166;
+    margin-top: 3px;
+    min-width: 20px;
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.copyright {
+    color: #e9d8c4;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.freshness-notice p {
+    color: #ffd166;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}

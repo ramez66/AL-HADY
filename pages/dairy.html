@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الألبان والأجبان - الهدى الحديث</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/dairy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- شريط التقدم -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- زر العودة للأعلى -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- واتساب -->
+    <a class="whatsapp-btn" href="https://wa.me/967XXXXXXXX" target="_blank" rel="noopener" aria-label="واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-store"></i>
+            <span>الهدى الحديث</span>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="فتح القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="mainNav">
+            <a href="../index.html">الرئيسية</a>
+            <a href="../index.html#about">من نحن</a>
+            <a href="../index.html#categories">الأقسام</a>
+            <a href="../index.html#offers">العروض</a>
+            <a href="products.html">المنتجات</a>
+            <a href="vegetables.html">الخضروات والفواكه</a>
+            <a href="meats.html">اللحوم الطازجة</a>
+            <a href="groceries.html">المواد التموينية</a>
+            <a href="cleaning.html">المنظفات والمنزلية</a>
+            <a href="bakery.html">المخبوزات الطازجة</a>
+            <a href="dairy.html" class="active">الألبان والأجبان</a>
+            <a href="../index.html#testimonials">آراء العملاء</a>
+            <a href="contact.html">تواصل معنا</a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="dairy-page">
+        <!-- قسم الهيرو للألبان والأجبان -->
+        <section class="dairy-hero">
+            <div class="hero-content">
+                <h1><i class="fas fa-cheese"></i> قسم الألبان والأجبان</h1>
+                <p>طازجة من المزرعة إلى مائدتك. أجبان محلية وعالمية، ألبان طازجة، قشدة، زبدة ومنتجات ألبان عالية الجودة</p>
+                <div class="hero-features">
+                    <span><i class="fas fa-truck"></i> توصيل مبرد</span>
+                    <span><i class="fas fa-heart"></i> خالية من المواد الحافظة</span>
+                    <span><i class="fas fa-leaf"></i> طبيعية 100%</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/images/dairy/hero-bg.jpg" alt="ألبان وأجبان متنوعة">
+            </div>
+        </section>
+
+        <!-- قسم الأنواع -->
+        <section class="dairy-types">
+            <div class="types-header">
+                <h2><i class="fas fa-utensils"></i> أنواع الألبان والأجبان</h2>
+                <p>اختر من تشكيلتنا الواسعة من منتجات الألبان الطازجة</p>
+            </div>
+            
+            <div class="types-grid">
+                <div class="type-card active" data-type="all">
+                    <div class="type-icon">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <h3>الكل</h3>
+                </div>
+                
+                <div class="type-card" data-type="cheese">
+                    <div class="type-icon">
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <h3>الأجبان</h3>
+                </div>
+                
+                <div class="type-card" data-type="milk">
+                    <div class="type-icon">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <h3>الألبان</h3>
+                </div>
+                
+                <div class="type-card" data-type="yogurt">
+                    <div class="type-icon">
+                        <i class="fas fa-blender"></i>
+                    </div>
+                    <h3>الزبادي</h3>
+                </div>
+                
+                <div class="type-card" data-type="cream">
+                    <div class="type-icon">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3>القشدة والزبدة</h3>
+                </div>
+                
+                <div class="type-card" data-type="special">
+                    <div class="type-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>الخاصة</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم البحث والتصفية -->
+        <section class="dairy-filter">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <h3><i class="fas fa-filter"></i> تصفية حسب</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">الكل</button>
+                        <button class="filter-btn" data-filter="fresh">طازج اليوم</button>
+                        <button class="filter-btn" data-filter="popular">الأكثر طلباً</button>
+                        <button class="filter-btn" data-filter="discount">عروض</button>
+                        <button class="filter-btn" data-filter="local">محلي</button>
+                        <button class="filter-btn" data-filter="imported">مستورد</button>
+                    </div>
+                </div>
+                
+                <div class="sort-group">
+                    <select class="sort-select" id="sortDairy">
+                        <option value="default">الترتيب الافتراضي</option>
+                        <option value="price-low">السعر: من الأقل للأعلى</option>
+                        <option value="price-high">السعر: من الأعلى للأقل</option>
+                        <option value="name">الاسم: أ-ي</option>
+                        <option value="freshness">الأكثر طزاجة</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المنتجات -->
+        <section class="dairy-products">
+            <div class="products-header">
+                <h2><i class="fas fa-basket-shopping"></i> المنتجات المتاحة الآن</h2>
+                <div class="freshness-indicator">
+                    <i class="fas fa-snowflake"></i>
+                    <span>محفوظة في درجة حرارة مبردة مناسبة</span>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- المنتجات ستظهر هنا ديناميكياً -->
+            </div>
+            
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+                <p>جاري تحميل المنتجات...</p>
+            </div>
+            
+            <div class="no-products" id="noProducts" style="display: none;">
+                <div class="empty-state">
+                    <i class="fas fa-cheese"></i>
+                    <h3>لا توجد منتجات متاحة حالياً</h3>
+                    <p>سيتم إضافة منتجات جديدة قريباً</p>
+                </div>
+            </div>
+            
+            <div class="dairy-tips">
+                <h3><i class="fas fa-lightbulb"></i> نصائح للحفظ الأمثل</h3>
+                <div class="tips-container">
+                    <div class="tip">
+                        <i class="fas fa-temperature-low"></i>
+                        <p>احفظ الأجبان في أبرد جزء من الثلاجة</p>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-box"></i>
+                        <p>احفظ الجبن في وعاء محكم بعد فتحه</p>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-clock"></i>
+                        <p>استخدم الألبان خلال 3 أيام من فتحها</p>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-ban"></i>
+                        <p>لا تجمد الأجبان الطرية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم العروض الخاصة -->
+        <section class="dairy-offers">
+            <div class="offers-header">
+                <h2><i class="fas fa-percentage"></i> عروض الألبان والأجبان</h2>
+                <p>وفر أكثر مع عروضنا الخاصة على منتجات الألبان الطازجة</p>
+            </div>
+            
+            <div class="offers-container">
+                <div class="offer-card main-offer">
+                    <div class="offer-badge">عرض اليوم</div>
+                    <div class="offer-content">
+                        <h3>عرض العائلة الكبير</h3>
+                        <p class="offer-desc">اشتري 5 منتجات ألبان واحصل على منتجين مجاناً</p>
+                        <div class="offer-price">
+                            <span class="old-price">15,000 ريال</span>
+                            <span class="new-price">10,500 ريال</span>
+                        </div>
+                        <div class="offer-timer">
+                            <i class="fas fa-clock"></i>
+                            ينتهي العرض خلال: <span id="offerTimer">04:32:15</span>
+                        </div>
+                        <button class="btn-offer">احصل على العرض</button>
+                    </div>
+                    <div class="offer-image">
+                        <img src="../assets/images/dairy/offer-cheese.jpg" alt="عرض الأجبان">
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-badge">خصم 30%</div>
+                    <div class="offer-content">
+                        <h3>باقة الجبن العالمية</h3>
+                        <p class="offer-desc">5 أنواع أجبان مستوردة بخصم 30%</p>
+                        <div class="offer-price">
+                            <span class="old-price">25,000 ريال</span>
+                            <span class="new-price">17,500 ريال</span>
+                        </div>
+                        <button class="btn-offer">اطلب الباقة</button>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-badge">جديد</div>
+                    <div class="offer-content">
+                        <h3>زبادي منزلي</h3>
+                        <p class="offer-desc">زبادي طبيعي 100% بدون إضافات صناعية</p>
+                        <div class="offer-price">
+                            <span class="new-price">بدءاً من 1,500 ريال</span>
+                        </div>
+                        <button class="btn-offer">اطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأجبان التقليدية -->
+        <section class="traditional-dairy">
+            <div class="traditional-header">
+                <h2><i class="fas fa-history"></i> أجبان يمنية تقليدية</h2>
+                <p>نحافظ على التراث بأجود الأجبان المحلية</p>
+            </div>
+            
+            <div class="traditional-grid">
+                <div class="traditional-item">
+                    <div class="item-image">
+                        <img src="../assets/images/dairy/jibenah.jpg" alt="جبنة محلية">
+                    </div>
+                    <div class="item-content">
+                        <h3>جبنة يمنية طرية</h3>
+                        <p>جبنة محلية طرية، مالحة قليلاً، مثالية مع الخبز والزيتون</p>
+                        <div class="item-price">4,500 ريال/كجم</div>
+                    </div>
+                </div>
+                
+                <div class="traditional-item">
+                    <div class="item-image">
+                        <img src="../assets/images/dairy/mish.jpg" alt="مش">
+                    </div>
+                    <div class="item-content">
+                        <h3>مش (جبنة مجففة)</h3>
+                        <p>جبنة يمنية مجففة تقليدية، تستخدم في الطبخ أو مع السلطات</p>
+                        <div class="item-price">6,000 ريال/كجم</div>
+                    </div>
+                </div>
+                
+                <div class="traditional-item">
+                    <div class="item-image">
+                        <img src="../assets/images/dairy/samn.jpg" alt="سمن بلدي">
+                    </div>
+                    <div class="item-content">
+                        <h3>سمن يمني بلدي</h3>
+                        <p>سمن نقي مصنوع من حليب الأبقار، يعطي نكهة مميزة للطعام</p>
+                        <div class="item-price">12,000 ريال/كجم</div>
+                    </div>
+                </div>
+                
+                <div class="traditional-item">
+                    <div class="item-image">
+                        <img src="../assets/images/dairy/laban.jpg" alt="لبن مخيض">
+                    </div>
+                    <div class="item-content">
+                        <h3>لبن مخيض تقليدي</h3>
+                        <p>لبن منزلي مخيض، منعش وصحي، مثالي للأيام الحارة</p>
+                        <div class="item-price">2,500 ريال/لتر</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الجبن العالمية -->
+        <section class="world-cheeses">
+            <div class="world-header">
+                <h2><i class="fas fa-globe-americas"></i> أجبان عالمية مميزة</h2>
+                <p>تشكيلة من أشهر الأجبان العالمية بجودة عالية</p>
+            </div>
+            
+            <div class="cheese-types">
+                <div class="cheese-category">
+                    <h3><i class="fas fa-flag-usa"></i> أجبان فرنسية</h3>
+                    <div class="cheese-list">
+                        <div class="cheese-item">
+                            <span class="cheese-name">بري</span>
+                            <span class="cheese-price">15,000 ريال</span>
+                        </div>
+                        <div class="cheese-item">
+                            <span class="cheese-name">كامامبير</span>
+                            <span class="cheese-price">18,000 ريال</span>
+                        </div>
+                        <div class="cheese-item">
+                            <span class="cheese-name">روكفور</span>
+                            <span class="cheese-price">22,000 ريال</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cheese-category">
+                    <h3><i class="fas fa-flag-usa"></i> أجبان هولندية</h3>
+                    <div class="cheese-list">
+                        <div class="cheese-item">
+                            <span class="cheese-name">جودا</span>
+                            <span class="cheese-price">12,000 ريال</span>
+                        </div>
+                        <div class="cheese-item">
+                            <span class="cheese-name">إيدام</span>
+                            <span class="cheese-price">11,000 ريال</span>
+                        </div>
+                        <div class="cheese-item">
+                            <span class="cheese-name">ماسدام</span>
+                            <span class="cheese-price">13,000 ريال</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cheese-category">
+                    <h3><i class="fas fa-flag-usa"></i> أجبان إيطالية</h3>
+                    <div class="cheese-list">
+                        <div class="cheese-item">
+                            <span class="cheese-name">بارميزان</span>
+                            <span class="cheese-price">20,000 ريال</span>
+                        </div>
+                        <div class="cheese-item">
+                            <span class="cheese-name">موزاريلا</span>
+                            <span class="cheese-price">10,000 ريال</span>
+                        </div>
+                        <div class="cheese-item">
+                            <span class="cheese-name">ريكوتا</span>
+                            <span class="cheese-price">8,500 ريال</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الطلبات الكبيرة -->
+        <section class="bulk-orders">
+            <div class="bulk-container">
+                <div class="bulk-content">
+                    <h2><i class="fas fa-shopping-basket"></i> طلبات الجملة للمناسبات</h2>
+                    <p>نوفر منتجات ألبان بكميات كبيرة للمناسبات والمطاعم</p>
+                    <ul class="bulk-features">
+                        <li><i class="fas fa-check"></i> أسعار خاصة للكميات</li>
+                        <li><i class="fas fa-check"></i> توصيل مجاني للطلبات الكبيرة</li>
+                        <li><i class="fas fa-check"></i> تغليف خاص للمناسبات</li>
+                        <li><i class="fas fa-check"></i> توصيل في الوقت المحدد</li>
+                    </ul>
+                    <div class="bulk-notice">
+                        <i class="fas fa-info-circle"></i>
+                        <p>ننصح بالطلب قبل 72 ساعة على الأقل للطلبات الكبيرة</p>
+                    </div>
+                </div>
+                
+                <div class="bulk-form">
+                    <h3>طلب كمية كبيرة</h3>
+                    <form id="bulkOrderForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="اسم المناسبة/المؤسسة" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="date" placeholder="تاريخ التوصيل" required min="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <select required>
+                                <option value="">نوع المنتجات</option>
+                                <option value="cheese">أجبان</option>
+                                <option value="milk">ألبان</option>
+                                <option value="yogurt">زبادي</option>
+                                <option value="mixed">متنوع</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="تفاصيل الطلب (الكمية، الأنواع، التغليف)" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-bulk-order">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال طلب الجملة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم نصائح التخزين -->
+        <section class="storage-tips">
+            <div class="storage-header">
+                <h2><i class="fas fa-temperature-low"></i> نصائح حفظ الألبان والأجبان</h2>
+                <p>حافظ على جودة منتجات الألبان لأطول فترة</p>
+            </div>
+            
+            <div class="storage-grid">
+                <div class="storage-tip">
+                    <div class="tip-icon">
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <h3>الأجبان الصلبة</h3>
+                    <p>احفظ في الثلاجة ملفوفة بورق شمعي، تبقى طازجة لمدة 3-4 أسابيع</p>
+                </div>
+                
+                <div class="storage-tip">
+                    <div class="tip-icon">
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <h3>الأجبان الطرية</h3>
+                    <p>احفظ في وعاء محكم في الثلاجة، تبقى طازجة لمدة 1-2 أسبوع</p>
+                </div>
+                
+                <div class="storage-tip">
+                    <div class="tip-icon">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <h3>الحليب</h3>
+                    <p>احفظ في الثلاجة في عبوته الأصلية، يستمر لمدة 5-7 أيام بعد الفتح</p>
+                </div>
+                
+                <div class="storage-tip">
+                    <div class="tip-icon">
+                        <i class="fas fa-blender"></i>
+                    </div>
+                    <h3>الزبادي</h3>
+                    <p>احفظ في الثلاجة مغطى، يبقى طازجاً لمدة 7-10 أيام بعد الفتح</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة -->
+        <section class="dairy-faq">
+            <div class="faq-header">
+                <h2><i class="fas fa-question-circle"></i> أسئلة شائعة</h2>
+                <p>إجابات على استفساراتكم حول منتجات الألبان</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كيف أحفظ الجبن بعد فتحه؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>لفي الجبن بورق شمعي خاص أو احفظيه في وعاء محكم في الثلاجة. تجنبي استخدام البلاستيك لأنه يحبس الرطوبة.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل منتجاتكم مناسبة للحمية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، لدينا قسم خاص لمنتجات الألبان قليلة الدسم والخالية من اللاكتوز. اسأل موظفينا عن الخيارات المتاحة.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل يمكنني تجميد الجبن؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكن تجميد الأجبان الصلبة لمدة 3-6 أشهر، لكن الأجبان الطرية لا تناسب التجميد لأنها تفقد قوامها.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كم تبقى منتجات الألبان طازجة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>الحليب: 5-7 أيام في الثلاجة. الجبن الصلب: 3-4 أسابيع. الجبن الطري: 1-2 أسبوع. الزبادي: 7-10 أيام.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التوصيل المبرد -->
+        <section class="cold-delivery">
+            <div class="delivery-container">
+                <div class="delivery-content">
+                    <h2><i class="fas fa-truck"></i> توصيل مبرد للحفاظ على الجودة</h2>
+                    <p>نضمن وصول منتجات الألبان إليك بحالة مثالية مع نظام التبريد المتخصص</p>
+                    
+                    <div class="delivery-features">
+                        <div class="feature">
+                            <i class="fas fa-snowflake"></i>
+                            <div>
+                                <h4>نظام تبريد متكامل</h4>
+                                <p>مركبات مبردة تحافظ على درجة الحرارة المناسبة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>توصيل سريع</h4>
+                                <p>خلال 60 دقيقة من الطلب للحفاظ على الطزاجة</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>ضمان الجودة</h4>
+                                <p>نضمن وصول المنتجات بحالة ممتازة أو استبدال مجاني</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-delivery" id="orderCold">
+                        <i class="fas fa-snowflake"></i>
+                        اطلب ألبان مبردة الآن
+                    </button>
+                </div>
+                
+                <div class="delivery-image">
+                    <img src="../assets/images/dairy/cold-delivery.jpg" alt="توصيل مبرد">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dairy-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>قسم الألبان والأجبان</h3>
+                <p>نقدم لكم أجود أنواع الألبان والأجبان المحلية والعالمية، طازجة وبجودة عالية</p>
+                <div class="footer-hours">
+                    <h4>درجة الحرارة:</h4>
+                    <p>محفوظة عند 2-4°C للحفاظ على الجودة</p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="products.html">جميع المنتجات</a></li>
+                    <li><a href="groceries.html">المواد التموينية</a></li>
+                    <li><a href="meats.html">اللحوم الطازجة</a></li>
+                    <li><a href="bakery.html">المخبوزات الطازجة</a></li>
+                    <li><a href="dairy.html" class="active">الألبان والأجبان</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>معلومات الاتصال</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 01-2345678</p>
+                    <p><i class="fas fa-phone"></i> 777123456 (لطلبات الجملة)</p>
+                    <p><i class="fas fa-envelope"></i> dairy@alhuda-modern.com</p>
+                    <p><i class="fas fa-clock"></i> يومياً: 7 ص - 10 م</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i> منتجات الألبان</a>
+                    <a href="#"><i class="fab fa-snapchat"></i> وصفات بالأجبان</a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>نصائح سريعة</h3>
+                <div class="quick-tips">
+                    <p><i class="fas fa-lightbulb"></i> للجبن الطري: اتركيه خارج الثلاجة 30 دقيقة قبل التقديم</p>
+                    <p><i class="fas fa-lightbulb"></i> للحفظ: قسمي الجبن الكبير لقطع صغيرة قبل التخزين</p>
+                    <p><i class="fas fa-lightbulb"></i> للتجميد: لفّي الجبن بورق قصدير قبل التجميد</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                © 2026 قسم الألبان والأجبان - الهدى الحديث. جميع الحقوق محفوظة.
+            </div>
+            <div class="freshness-notice">
+                <p><i class="fas fa-snowflake"></i> جميع منتجاتنا محفوظة بدرجة الحرارة المناسبة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/dairy.js"></script>
+</body>
+</html>

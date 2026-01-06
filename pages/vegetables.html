@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخضروات والفواكه - الهدى الحديث</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/vegetables/vegetables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- شريط التقدم -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- زر العودة للأعلى -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- واتساب -->
+    <a class="whatsapp-btn" href="https://wa.me/967XXXXXXXX" target="_blank" rel="noopener" aria-label="واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+   <header>
+   <div class="logo" aria-hidden="true">
+            <i class="fas fa-store"></i>
+            <span>الهدى الحديث</span>
+        </div>
+
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="فتح القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="mainNav" role="navigation">
+            <a href="#about">من نحن</a>
+            <a href="#categories">الأقسام</a>
+            <a href="#offers">العروض</a>
+            <a href="#testimonials">آراء العملاء</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="vegetables-page">
+        <!-- قسم الهيرو للخضروات والفواكه -->
+        <section class="vegetables-hero">
+            <div class="hero-content">
+                <h1><i class="fas fa-seedling"></i> قسم الخضروات والفواكه الطازجة</h1>
+                <p>من المزرعة مباشرة إلى مائدتك، نقدم لكم أجود أنواع الخضروات والفواكه الموسمية الطازجة</p>
+                <div class="hero-features">
+                    <span><i class="fas fa-leaf"></i> منتجات عضوية</span>
+                    <span><i class="fas fa-truck"></i> توصيل يومي</span>
+                    <span><i class="fas fa-star"></i> جودة عالية</span>
+                </div>
+            </div>
+            <div class="hero-image">
+          <img src="https://clarifresh.com/wp-content/uploads/2022/02/Retailer-blog-post-image.jpg" alt="فواكه وخضروات طازجة">
+
+            </div>
+        </section>
+
+        <!-- قسم الفئات الموسمية -->
+        <section class="seasonal-section">
+            <div class="seasonal-header">
+                <h2><i class="fas fa-calendar-alt"></i> المنتجات الموسمية</h2>
+                <p>استمتع بمنتجات موسمية طازجة من مزارعنا المحلية</p>
+            </div>
+            
+            <div class="seasonal-categories">
+                <div class="seasonal-category active" data-season="all">
+                    <i class="fas fa-th"></i>
+                    <span>الكل</span>
+                </div>
+                <div class="seasonal-category" data-season="winter">
+                    <i class="fas fa-snowflake"></i>
+                    <span>شتوي</span>
+                </div>
+                <div class="seasonal-category" data-season="summer">
+                    <i class="fas fa-sun"></i>
+                    <span>صيفي</span>
+                </div>
+                <div class="seasonal-category" data-season="spring">
+                    <i class="fas fa-flower"></i>
+                    <span>ربيعي</span>
+                </div>
+                <div class="seasonal-category" data-season="autumn">
+                    <i class="fas fa-leaf"></i>
+                    <span>خريفي</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم تصفية المنتجات -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <h3><i class="fas fa-filter"></i> تصفية حسب النوع</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-type="all">الكل</button>
+                        <button class="filter-btn" data-type="vegetables">خضروات</button>
+                        <button class="filter-btn" data-type="fruits">فواكه</button>
+                        <button class="filter-btn" data-type="herbs">أعشاب</button>
+                        <button class="filter-btn" data-type="organic">عضوي</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3><i class="fas fa-sort-amount-down"></i> ترتيب حسب</h3>
+                    <select class="sort-select" id="sortProducts">
+                        <option value="default">الأحدث</option>
+                        <option value="price-low">السعر: من الأقل للأعلى</option>
+                        <option value="price-high">السعر: من الأعلى للأقل</option>
+                        <option value="name">الاسم: أ-ي</option>
+                        <option value="popular">الأكثر طلباً</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- شبكة المنتجات -->
+        <section class="products-grid-section">
+            <div class="products-grid" id="productsGrid">
+                <!-- سيتم تحميل المنتجات ديناميكياً -->
+            </div>
+            
+            <div class="loading-spinner" id="loadingSpinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>جاري تحميل المنتجات...</span>
+            </div>
+            
+            <div class="no-products" id="noProducts" style="display: none;">
+                <i class="fas fa-seedling"></i>
+                <h3>لا توجد منتجات متاحة حالياً</h3>
+                <p>الرجاء المحاولة مرة أخرى لاحقاً</p>
+            </div>
+        </section>
+
+        <!-- قسم العروض الخاصة -->
+        <section class="specials-section">
+            <div class="specials-header">
+                <h2><i class="fas fa-tags"></i> عروض اليوم</h2>
+                <p>استفد من عروضنا المميزة على المنتجات الطازجة</p>
+            </div>
+            
+            <div class="specials-grid">
+                <div class="special-card">
+                    <div class="special-badge">خصم 20%</div>
+                    <img src="../assets/images/vegetables/tomatoes.jpg" alt="طماطم">
+                    <div class="special-content">
+                        <h3>طماطم صنعاء</h3>
+                        <p>طماطم حمراء طازجة من مزارع صنعاء</p>
+                        <div class="special-price">
+                            <span class="old-price">1200 ريال</span>
+                            <span class="new-price">960 ريال</span>
+                        </div>
+                        <button class="btn-special">أطلب الآن</button>
+                    </div>
+                </div>
+                
+                <div class="special-card">
+                    <div class="special-badge">2 × 1</div>
+                    <img src="../assets/images/vegetables/bananas.jpg" alt="موز">
+                    <div class="special-content">
+                        <h3>موز حلو</h3>
+                        <p>موز أصفر ناضج، اشترِ كيلو واحصل على كيلو مجاناً</p>
+                        <div class="special-price">
+                            <span class="new-price">1800 ريال</span>
+                        </div>
+                        <button class="btn-special">أطلب الآن</button>
+                    </div>
+                </div>
+                
+                <div class="special-card">
+                    <div class="special-badge">جديد</div>
+                    <img src="../assets/images/vegetables/strawberries.jpg" alt="فراولة">
+                    <div class="special-content">
+                        <h3>فراولة عضوية</h3>
+                        <p>فراولة حمراء عضوية من مزارع صنعاء</p>
+                        <div class="special-price">
+                            <span class="new-price">2500 ريال</span>
+                        </div>
+                        <button class="btn-special">أطلب الآن</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم فوائد المنتجات -->
+        <section class="benefits-section">
+            <div class="benefits-header">
+                <h2><i class="fas fa-heart"></i> فوائد صحية</h2>
+                <p>اكتشف الفوائد الصحية لمنتجاتنا الطازجة</p>
+            </div>
+            
+            <div class="benefits-tabs">
+                <div class="benefits-tab active" data-benefit="all">
+                    <i class="fas fa-star"></i>
+                    <span>الجميع</span>
+                </div>
+                <div class="benefits-tab" data-benefit="vitamins">
+                    <i class="fas fa-capsules"></i>
+                    <span>فيتامينات</span>
+                </div>
+                <div class="benefits-tab" data-benefit="minerals">
+                    <i class="fas fa-gem"></i>
+                    <span>معادن</span>
+                </div>
+                <div class="benefits-tab" data-benefit="antioxidants">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>مضادات أكسدة</span>
+                </div>
+                <div class="benefits-tab" data-benefit="fiber">
+                    <i class="fas fa-leaf"></i>
+                    <span>ألياف</span>
+                </div>
+            </div>
+            
+            <div class="benefits-content">
+                <div class="benefit-item active" data-benefit="vitamins">
+                    <div class="benefit-icon">
+                        <i class="fas fa-capsules"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h3>غنية بالفيتامينات</h3>
+                        <p>تحتوي الخضروات والفواكه الطازجة على فيتامينات A, C, K الأساسية لتعزيز المناعة وتحسين صحة البشرة والعيون.</p>
+                        <ul class="benefit-products">
+                            <li><i class="fas fa-carrot"></i> الجزر: فيتامين أ</li>
+                            <li><i class="fas fa-lemon"></i> الليمون: فيتامين ج</li>
+                            <li><i class="fas fa-apple-alt"></i> التفاح: فيتامينات متنوعة</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="benefit-item" data-benefit="minerals">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h3>مصدر للمعادن</h3>
+                        <p>توفر المعادن الأساسية مثل البوتاسيوم، المغنيسيوم، والحديد التي تدعم صحة العظام ووظائف الجسم الحيوية.</p>
+                        <ul class="benefit-products">
+                            <li><i class="fas fa-leaf"></i> السبانخ: حديد</li>
+                            <li><i class="fas fa-seedling"></i> الموز: بوتاسيوم</li>
+                            <li><i class="fas fa-pepper-hot"></i> الفلفل: مغنيسيوم</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم نصائح الطزاجة -->
+        <section class="freshness-tips">
+            <div class="tips-container">
+                <div class="tips-header">
+                    <h2><i class="fas fa-lightbulb"></i> كيف تختار الخضروات والفواكه الطازجة؟</h2>
+                    <p>نصائح عملية لاختيار أفضل المنتجات</p>
+                </div>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>اللون</h3>
+                        <p>ابحث عن الألوان الزاهية والموحدة، تجنب المنتجات ذات البقع الداكنة أو التغير في اللون.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-hand-paper"></i>
+                        </div>
+                        <h3>الملمس</h3>
+                        <p>يجب أن تكون الخضروات متماسكة والفواكه صلبة قليلاً عند الضغط الخفيف.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <h3>الرائحة</h3>
+                        <p>المنتجات الطازجة لها رائحة طيبة ونظيفة، تجنب الروائح الكريهة أو الحامضة.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                        <h3>الوزن</h3>
+                        <p>اختر المنتجات الثقيلة بالنسبة لحجمها، فهذا يدل على أنها مليئة بالعصارة والطزاجة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التخزين والحفظ -->
+        <section class="storage-section">
+            <div class="storage-header">
+                <h2><i class="fas fa-temperature-low"></i> نصائح التخزين</h2>
+                <p>احفظ منتجاتك طازجة لأطول فترة ممكنة</p>
+            </div>
+            
+            <div class="storage-grid">
+                <div class="storage-card fridge">
+                    <div class="storage-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>التبريد</h3>
+                    <ul>
+                        <li>الخضروات الورقية: في أكياس ورقية</li>
+                        <li>الجزر والفجل: في الماء البارد</li>
+                        <li>التفاح: منفصلاً عن الخضروات</li>
+                    </ul>
+                </div>
+                
+                <div class="storage-card room">
+                    <div class="storage-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>درجة حرارة الغرفة</h3>
+                    <ul>
+                        <li>الطماطم: خارج الثلاجة</li>
+                        <li>الموز: في مكان بارد وجاف</li>
+                        <li>البطاطس والبصل: في مكان مظلم</li>
+                    </ul>
+                </div>
+                
+                <div class="storage-card freezer">
+                    <div class="storage-icon">
+                        <i class="fas fa-ice-cream"></i>
+                    </div>
+                    <h3>التجميد</h3>
+                    <ul>
+                        <li>الفواكه: بعد الغسل والتجفيف</li>
+                        <li>الخضروات: بعد السلق الخفيف</li>
+                        <li>الأعشاب: في مكعبات ثلج</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة -->
+        <section class="vegetables-faq">
+            <div class="faq-header">
+                <h2><i class="fas fa-question-circle"></i> أسئلة شائعة</h2>
+                <p>إجابات على أكثر الأسئلة تكراراً</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كم مرة تصل المنتجات الطازجة إلى المتجر؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نستقبل شحنات يومية من المزارع المحلية في الصباح الباكر (5-6 صباحاً) لضمان وصول المنتجات طازجة للعملاء مع افتتاح المتجر.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل تقدمون منتجات عضوية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، لدينا قسم خاص للمنتجات العضوية المعتمدة من وزارة الزراعة. هذه المنتجات تزرع بدون مبيدات كيميائية أو أسمدة صناعية.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ماذا أفعل إذا وجدت منتجاً غير طازج؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك استبدال أو استرجاع أي منتج خلال 24 ساعة من الشراء مع الفاتورة. نضمن لكم رضاكم التام عن جودة منتجاتنا.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل يمكنني طلب كميات كبيرة للفعاليات؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نوفر خدمة الطلبات الكبيرة للفعاليات والمناسبات مع خصم خاص. ننصح بالطلب المسبق قبل 3 أيام على الأقل.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الباقة الأسبوعية -->
+        <section class="weekly-basket">
+            <div class="basket-container">
+                <div class="basket-content">
+                    <h2><i class="fas fa-shopping-basket"></i> الباقة الأسبوعية</h2>
+                    <p>احصل على مجموعة متنوعة من الخضروات والفواكه الطازجة أسبوعياً بخصم 15%</p>
+                    <ul class="basket-features">
+                        <li><i class="fas fa-check"></i> 5 أنواع خضروات طازجة</li>
+                        <li><i class="fas fa-check"></i> 3 أنواع فواكه موسمية</li>
+                        <li><i class="fas fa-check"></i> أعشاب طازجة مجاناً</li>
+                        <li><i class="fas fa-check"></i> توصيل مجاني أسبوعياً</li>
+                    </ul>
+                    <div class="basket-price">
+                        <span class="old-price">25,000 ريال</span>
+                        <span class="new-price">21,250 ريال/أسبوع</span>
+                    </div>
+                    <button class="btn-basket" id="subscribeBasket">اشترك الآن</button>
+                </div>
+                
+                <div class="basket-image">
+                    <img src="../assets/images/vegetables/basket.jpg" alt="الباقة الأسبوعية">
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>حول الهدى الحديث</h3>
+                <p style="color:#bbb;">سوبر ماركت محلي يقدم تشكيلة واسعة من المنتجات الطازجة والتموينية.</p>
+            </div>
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#offers">العروض</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>تواصل</h3>
+                <p style="color:#bbb;">الهاتف: 01-XXXXXXX</p>
+                <p style="color:#bbb;">العنوان: صنعاء، اليمن</p>
+            </div>
+        </div>
+        <div class="copyright">© 2026 الهدى الحديث. جميع الحقوق محفوظة.</div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/vegetables.js"></script>
+</body>
+</html>

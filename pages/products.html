@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجاتنا - الهدى الحديث</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-store"></i>
+            <span>الهدى الحديث</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="mainNav">
+            <a href="../index.html">الرئيسية</a>
+            <a href="../index.html#about">من نحن</a>
+            <a href="../index.html#categories">الأقسام</a>
+            <a href="../index.html#offers">العروض</a>
+            <a href="products.html" class="active">المنتجات</a>
+            <a href="../index.html#testimonials">آراء العملاء</a>
+            <a href="contact.html">تواصل معنا</a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <section class="page-header">
+            <h1>جميع المنتجات</h1>
+            <p>تصفح تشكيلتنا الواسعة من المنتجات</p>
+        </section>
+
+        <section class="products-container">
+            <div class="filters">
+                <div class="filter-group">
+                    <h3>الأقسام</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="خضروات"> الخضروات والفواكه</label>
+                        <label><input type="checkbox" value="لحوم"> اللحوم الطازجة</label>
+                        <label><input type="checkbox" value="تموين"> المواد التموينية</label>
+                        <label><input type="checkbox" value="منظفات"> المنظفات والمنزل</label>
+                        <label><input type="checkbox" value="مخبوزات"> المخبوزات الطازجة</label>
+                        <label><input type="checkbox" value="ألبان"> الألبان والأجبان</label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>ترتيب حسب</h3>
+                    <select class="sort-select">
+                        <option value="default">الأحدث</option>
+                        <option value="price-low">السعر: من الأقل للأعلى</option>
+                        <option value="price-high">السعر: من الأعلى للأقل</option>
+                        <option value="name">الاسم: أ-ي</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- سيتم تحميل المنتجات ديناميكياً -->
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/products.js"></script>
+</body>
+</html>

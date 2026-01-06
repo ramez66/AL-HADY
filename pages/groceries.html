@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المواد التموينية - الهدى الحديث</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+
+    <link rel="stylesheet" href="../assets/css/groceries/groceries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- شريط التقدم -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- زر العودة للأعلى -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- واتساب -->
+    <a class="whatsapp-btn" href="https://wa.me/967XXXXXXXX" target="_blank" rel="noopener" aria-label="واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+ <header>
+   <div class="logo" aria-hidden="true">
+            <i class="fas fa-store"></i>
+            <span>الهدى الحديث</span>
+        </div>
+
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="فتح القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="mainNav" role="navigation">
+            <a href="#about">من نحن</a>
+            <a href="#categories">الأقسام</a>
+            <a href="#offers">العروض</a>
+            <a href="#testimonials">آراء العملاء</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="groceries-page">
+        <!-- قسم الهيرو للمواد التموينية -->
+        <section class="groceries-hero">
+            <div class="hero-content">
+                <h1><i class="fas fa-boxes"></i> قسم المواد التموينية</h1>
+                <p>أساسيات منزلك متوفرة بأفضل الأسعار. أرز، سكر، زيت، دقيق ومعلبات بجودة عالمية</p>
+                <div class="hero-features">
+                    <span><i class="fas fa-shield-alt"></i> منتجات أصلية</span>
+                    <span><i class="fas fa-tags"></i> أسعار منافسة</span>
+                    <span><i class="fas fa-box"></i> توافر دائم</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/images/groceries/hero-bg.jpg" alt="مواد تموينية">
+            </div>
+        </section>
+
+        <!-- قسم الأقسام الفرعية -->
+        <section class="subcategories-section">
+            <div class="subcategories-header">
+                <h2><i class="fas fa-th-large"></i> أقسام المواد التموينية</h2>
+                <p>اختر القسم الذي تريده</p>
+            </div>
+            
+            <div class="subcategories-grid">
+                <a href="#rice" class="subcategory-card">
+                    <div class="subcategory-icon">
+                        <i class="fas fa-wheat-awn"></i>
+                    </div>
+                    <h3>الأرز والحبوب</h3>
+                    <p>أرز بسمتي، مصري، حريري وجميع أنواع الحبوب</p>
+                </a>
+                
+                <a href="#oil" class="subcategory-card">
+                    <div class="subcategory-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>الزيوت والدهون</h3>
+                    <p>زيت زيتون، زيت نباتي، سمنة وزبدة</p>
+                </a>
+                
+                <a href="#sugar" class="subcategory-card">
+                    <div class="subcategory-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>السكر والمنكهات</h3>
+                    <p>سكر، شاي، قهوة، بهارات ومنكهات</p>
+                </a>
+                
+                <a href="#canned" class="subcategory-card">
+                    <div class="subcategory-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <h3>المعلبات</h3>
+                    <p>معجون طماطم، فول، حمص، ذرة وغيرها</p>
+                </a>
+                
+                <a href="#flour" class="subcategory-card">
+                    <div class="subcategory-icon">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <h3>الدقيق والمخبوزات</h3>
+                    <p>دقيق، خميرة، معجنات جاهزة وخبز</p>
+                </a>
+                
+                <a href="#pasta" class="subcategory-card">
+                    <div class="subcategory-icon">
+                        <i class="fas fa-pasta"></i>
+                    </div>
+                    <h3>المكرونة والمعكرونة</h3>
+                    <p>مكرونة، شعيرية، معكرونة بأنواعها</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- قسم البحث والتصفية -->
+        <section class="search-filter-section">
+            <div class="filter-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchGroceries" placeholder="ابحث عن منتج تمويني...">
+                    <button class="search-btn">بحث</button>
+                </div>
+                
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <select class="filter-select" id="categoryFilter">
+                            <option value="all">جميع الأقسام</option>
+                            <option value="rice">الأرز والحبوب</option>
+                            <option value="oil">الزيوت والدهون</option>
+                            <option value="sugar">السكر والمنكهات</option>
+                            <option value="canned">المعلبات</option>
+                            <option value="flour">الدقيق والمخبوزات</option>
+                            <option value="pasta">المكرونة والمعكرونة</option>
+                            <option value="spices">البقوليات والبهارات</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <select class="filter-select" id="brandFilter">
+                            <option value="all">جميع الماركات</option>
+                            <option value="local">محلي</option>
+                            <option value="saudi">سعودي</option>
+                            <option value="emirati">إماراتي</option>
+                            <option value="turkish">تركي</option>
+                            <option value="indian">هندي</option>
+                            <option value="american">أمريكي</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <select class="filter-select" id="sortFilter">
+                            <option value="default">الترتيب الافتراضي</option>
+                            <option value="price-low">السعر: من الأقل للأعلى</option>
+                            <option value="price-high">السعر: من الأعلى للأقل</option>
+                            <option value="name">الاسم: أ-ي</option>
+                            <option value="popular">الأكثر طلباً</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المنتجات -->
+        <section class="products-section">
+            <div class="products-header">
+                <h2><i class="fas fa-shopping-basket"></i> جميع المنتجات</h2>
+                <div class="products-count">
+                    <span id="productsCount">0</span> منتج متوفر
+                </div>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- سيتم تحميل المنتجات ديناميكياً -->
+            </div>
+            
+            <div class="loading-spinner" id="loadingSpinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>جاري تحميل المنتجات...</span>
+            </div>
+            
+            <div class="no-products" id="noProducts" style="display: none;">
+                <i class="fas fa-box-open"></i>
+                <h3>لا توجد منتجات تطابق بحثك</h3>
+                <p>حاول البحث بكلمات أخرى أو تصفح الأقسام المختلفة</p>
+            </div>
+            
+            <div class="load-more" id="loadMoreBtn">
+                <button class="btn-load-more">
+                    <i class="fas fa-sync-alt"></i>
+                    تحميل المزيد
+                </button>
+            </div>
+        </section>
+
+        <!-- قسم العروض الأسبوعية -->
+        <section class="weekly-offers">
+            <div class="offers-header">
+                <h2><i class="fas fa-star"></i> عروض الأسبوع</h2>
+                <p>خصومات حصرية على المواد التموينية الأساسية</p>
+            </div>
+            
+            <div class="offers-slider">
+                <div class="slider-container" id="offersSlider">
+                    <!-- سيتم تحميل العروض ديناميكياً -->
+                </div>
+                <button class="slider-btn prev" id="prevBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="slider-btn next" id="nextBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- قسم الباقات العائلية -->
+        <section class="family-packages">
+            <div class="packages-header">
+                <h2><i class="fas fa-home"></i> باقات عائلية</h2>
+                <p>وفر أكثر مع باقاتنا المخصصة للعائلات</p>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="package-card basic">
+                    <div class="package-header">
+                        <h3>الباقة الأساسية</h3>
+                        <div class="package-price">75,000 ريال</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 10 كجم أرز بسمتي</li>
+                            <li><i class="fas fa-check"></i> 5 كجم سكر</li>
+                            <li><i class="fas fa-check"></i> 5 لتر زيت نباتي</li>
+                            <li><i class="fas fa-check"></i> 5 كجم دقيق</li>
+                            <li><i class="fas fa-check"></i> 12 علبة معلبات متنوعة</li>
+                            <li><i class="fas fa-times"></i> <del>بهارات مجانية</del></li>
+                        </ul>
+                    </div>
+                    <button class="btn-package" data-package="basic">اختر الباقة</button>
+                </div>
+                
+                <div class="package-card premium popular">
+                    <div class="package-badge">الأكثر طلباً</div>
+                    <div class="package-header">
+                        <h3>الباقة المميزة</h3>
+                        <div class="package-price">120,000 ريال</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 20 كجم أرز بسمتي</li>
+                            <li><i class="fas fa-check"></i> 10 كجم سكر</li>
+                            <li><i class="fas fa-check"></i> 10 لتر زيت نباتي + زيت زيتون</li>
+                            <li><i class="fas fa-check"></i> 10 كجم دقيق</li>
+                            <li><i class="fas fa-check"></i> 24 علبة معلبات متنوعة</li>
+                            <li><i class="fas fa-check"></i> بهارات مجانية بقيمة 5,000 ريال</li>
+                        </ul>
+                    </div>
+                    <button class="btn-package" data-package="premium">اختر الباقة</button>
+                </div>
+                
+                <div class="package-card deluxe">
+                    <div class="package-header">
+                        <h3>الباقة الفاخرة</h3>
+                        <div class="package-price">200,000 ريال</div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 40 كجم أرز بسمتي هندي</li>
+                            <li><i class="fas fa-check"></i> 20 كجم سكر</li>
+                            <li><i class="fas fa-check"></i> 20 لتر زيت ممتاز</li>
+                            <li><i class="fas fa-check"></i> 20 كجم دقيق فاخر</li>
+                            <li><i class="fas fa-check"></i> 48 علبة معلبات متنوعة</li>
+                            <li><i class="fas fa-check"></i> بهارات وقهوة مجانية بقيمة 15,000 ريال</li>
+                        </ul>
+                    </div>
+                    <button class="btn-package" data-package="deluxe">اختر الباقة</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الماركات العالمية -->
+        <section class="brands-section">
+            <div class="brands-header">
+                <h2><i class="fas fa-trademark"></i> أشهر الماركات</h2>
+                <p>نوفر لكم منتجات من أشهر الماركات العالمية</p>
+            </div>
+            
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img src="../assets/images/groceries/brands/rafhan.png" alt="رافان">
+                    <span>رافان</span>
+                </div>
+                <div class="brand-card">
+                    <img src="../assets/images/groceries/brands/almarai.png" alt="المراعي">
+                    <span>المراعي</span>
+                </div>
+                <div class="brand-card">
+                    <img src="../assets/images/groceries/brands/nadec.png" alt="ندك">
+                    <span>ندك</span>
+                </div>
+                <div class="brand-card">
+                    <img src="../assets/images/groceries/brands/olive.png" alt="زيت الزيتون">
+                    <span>زيت الزيتون</span>
+                </div>
+                <div class="brand-card">
+                    <img src="../assets/images/groceries/brands/nestle.png" alt="نستله">
+                    <span>نستله</span>
+                </div>
+                <div class="brand-card">
+                    <img src="../assets/images/groceries/brands/lays.png" alt="ليز">
+                    <span>ليز</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم تخزين المواد التموينية -->
+        <section class="storage-tips">
+            <div class="storage-header">
+                <h2><i class="fas fa-boxes-stacked"></i> نصائح التخزين</h2>
+                <p>كيف تخزن المواد التموينية بشكل صحيح</p>
+            </div>
+            
+            <div class="storage-tips-grid">
+                <div class="storage-tip">
+                    <div class="tip-icon">
+                        <i class="fas fa-jar"></i>
+                    </div>
+                    <h3>الأرز والحبوب</h3>
+                    <p>خزن في أوعية محكمة الغلق في مكان بارد وجاف بعيداً عن الرطوبة</p>
+                </div>
+                
+                <div class="storage-tip">
+                    <div class="tip-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>الزيوت</h3>
+                    <p>احفظ الزيوت في مكان مظلم وبارد، واغلق العبوة بإحكام بعد كل استخدام</p>
+                </div>
+                
+                <div class="storage-tip">
+                    <div class="tip-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>السكر</h3>
+                    <p>تجنب الرطوبة، خزن في أوعية محكمة لمنع التكتل</p>
+                </div>
+                
+                <div class="storage-tip">
+                    <div class="tip-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <h3>المعلبات</h3>
+                    <p>تخزن في درجة حرارة الغرفة، تجنب التعرض لأشعة الشمس المباشرة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة -->
+        <section class="groceries-faq">
+            <div class="faq-header">
+                <h2><i class="fas fa-question-circle"></i> أسئلة شائعة</h2>
+                <p>إجابات على أكثر الأسئلة تكراراً</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل تقدمون أسعار الجملة للمواد التموينية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم أسعار خاصة للكميات الكبيرة والتجار. للاستفسار عن أسعار الجملة، يرجى التواصل مع إدارة المبيعات على الرقم 01-2345678.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما هي مدة صلاحية المنتجات التموينية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>جميع منتجاتنا تحمل تاريخ صلاحية واضح. نضمن أن تكون جميع المنتجات بعيدة عن تاريخ انتهاء الصلاحية بفترة كافية.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل يمكنني استبدال أو استرجاع المواد التموينية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، يمكنك استبدال أو استرجاع أي منتج خلال 7 أيام من الشراء بشرط الاحتفاظ بالفاتورة وأن تكون العبوة سليمة وغير مفتوحة.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل لديكم خدمة توصيل للمواد التموينية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم خدمة التوصيل المجاني للمواد التموينية عند الشراء بأكثر من 50,000 ريال داخل مدينة صنعاء.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم طلب الجملة -->
+        <section class="wholesale-order">
+            <div class="wholesale-container">
+                <div class="wholesale-content">
+                    <h2><i class="fas fa-truck-loading"></i> طلب جملة للمواد التموينية</h2>
+                    <p>للحصول على أسعار خاصة للكميات الكبيرة والتجار</p>
+                    <ul class="wholesale-benefits">
+                        <li><i class="fas fa-percentage"></i> خصومات تصل إلى 20%</li>
+                        <li><i class="fas fa-shipping-fast"></i> توصيل مجاني للكميات الكبيرة</li>
+                        <li><i class="fas fa-calendar-check"></i> برنامج توريد شهري</li>
+                        <li><i class="fas fa-headset"></i> خدمة عملاء مخصصة</li>
+                    </ul>
+                    <button class="btn-wholesale" id="wholesaleBtn">اطلب عرض سعر</button>
+                </div>
+                
+                <div class="wholesale-form">
+                    <h3>طلب عرض سعر للجملة</h3>
+                    <form id="wholesaleForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="اسم المؤسسة/المتجر" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" placeholder="اسم المسؤول" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" placeholder="رقم الهاتف" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="البريد الإلكتروني" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="المنتجات المطلوبة والكميات" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الطلب
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="groceries-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>قسم المواد التموينية</h3>
+                <p>نوفر لكم جميع احتياجاتكم التموينية من أرز، سكر، زيت، دقيق ومعلبات بأفضل الأسعار</p>
+                <div class="business-hours">
+                    <h4>ساعات العمل:</h4>
+                    <p>يومياً: 7 صباحاً - 12 منتصف الليل</p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="products.html">جميع المنتجات</a></li>
+                    <li><a href="vegetables.html">الخضروات والفواكه</a></li>
+                    <li><a href="meats.html">اللحوم الطازجة</a></li>
+                    <li><a href="groceries.html" class="active">المواد التموينية</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>معلومات التواصل</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 01-2345678</p>
+                    <p><i class="fas fa-phone"></i> 777123456</p>
+                    <p><i class="fas fa-envelope"></i> groceries@alhuda-modern.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> صنعاء، اليمن - شارع الزبيري</p>
+                </div>
+                <div class="payment-methods">
+                    <h4>طرق الدفع:</h4>
+                    <div class="payment-icons">
+                        <i class="fas fa-money-bill-wave" title="نقدي"></i>
+                        <i class="fas fa-credit-card" title="بطاقات ائتمانية"></i>
+                        <i class="fas fa-mobile-alt" title="دفع إلكتروني"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2026 قسم المواد التموينية - الهدى الحديث. جميع الحقوق محفوظة.
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/groceries.js"></script>
+</body>
+</html>

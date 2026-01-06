@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنظفات والمنزلية - الهدى الحديث</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/cleaning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- شريط التقدم -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- زر العودة للأعلى -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- واتساب -->
+    <a class="whatsapp-btn" href="https://wa.me/967XXXXXXXX" target="_blank" rel="noopener" aria-label="واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+   <header>
+   <div class="logo" aria-hidden="true">
+            <i class="fas fa-store"></i>
+            <span>الهدى الحديث</span>
+        </div>
+
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="فتح القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav id="mainNav" role="navigation">
+            <a href="#about">من نحن</a>
+            <a href="#categories">الأقسام</a>
+            <a href="#offers">العروض</a>
+            <a href="#testimonials">آراء العملاء</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <main class="cleaning-page">
+        <!-- قسم الهيرو للمنظفات -->
+        <section class="cleaning-hero">
+            <div class="hero-content">
+                <h1><i class="fas fa-broom"></i> قسم المنظفات والمنتجات المنزلية</h1>
+                <p>نظافة منزلية بمعايير عالمية. منظفات، معطرات، أدوات تنظيف، ومنتجات العناية بالمنزل</p>
+                <div class="hero-features">
+                    <span><i class="fas fa-shield-virus"></i> آمنة على الصحة</span>
+                    <span><i class="fas fa-leaf"></i> صديقة للبيئة</span>
+                    <span><i class="fas fa-award"></i> جودة مضمونة</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../assets/images/cleaning/hero-bg.jpg" alt="منظفات ومنتجات منزلية">
+            </div>
+        </section>
+
+        <!-- قسم الأقسام الفرعية -->
+        <section class="cleaning-categories">
+            <div class="categories-header">
+                <h2><i class="fas fa-layer-group"></i> أقسام المنظفات</h2>
+                <p>اختر القسم المناسب لاحتياجاتك</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="laundry">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>منظفات الغسيل</h3>
+                    <p>مساحيق غسيل، مطهرات، منعمات الأقمشة</p>
+                </div>
+                
+                <div class="category-card" data-category="kitchen">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>منظفات المطبخ</h3>
+                    <p>سوائل غسيل الصحون، منظفات الأسطح</p>
+                </div>
+                
+                <div class="category-card" data-category="bathroom">
+                    <div class="category-icon">
+                        <i class="fas fa-bath"></i>
+                    </div>
+                    <h3>منظفات الحمام</h3>
+                    <p>مطهرات، مزيلات العفن، منظفات المراحيض</p>
+                </div>
+                
+                <div class="category-card" data-category="floor">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>منظفات الأرضيات</h3>
+                    <p>سوائل تنظيف الأرضيات، شامبو السجاد</p>
+                </div>
+                
+                <div class="category-card" data-category="air">
+                    <div class="category-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>معطرات الجو</h3>
+                    <p>معطرات جو، مبخرات، بخاخات عطرية</p>
+                </div>
+                
+                <div class="category-card" data-category="tools">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>أدوات التنظيف</h3>
+                    <p>فرش، إسفنج، قفازات، أدوات تنظيف</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم البحث والتصفية -->
+        <section class="cleaning-filter">
+            <div class="filter-container">
+                <div class="search-section">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchCleaning" placeholder="ابحث عن منتج تنظيف...">
+                        <button class="search-btn">بحث</button>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <select class="filter-select" id="categoryFilter">
+                            <option value="all">جميع الأقسام</option>
+                            <option value="laundry">منظفات الغسيل</option>
+                            <option value="kitchen">منظفات المطبخ</option>
+                            <option value="bathroom">منظفات الحمام</option>
+                            <option value="floor">منظفات الأرضيات</option>
+                            <option value="air">معطرات الجو</option>
+                            <option value="tools">أدوات التنظيف</option>
+                            <option value="eco">منتجات صديقة للبيئة</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <select class="filter-select" id="brandFilter">
+                            <option value="all">جميع الماركات</option>
+                            <option value="ariel">أريال</option>
+                            <option value="tide">تايد</option>
+                            <option value="persil">برسيل</option>
+                            <option value="omo">أومو</option>
+                            <option value="local">محلي</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <select class="filter-select" id="sizeFilter">
+                            <option value="all">جميع الأحجام</option>
+                            <option value="small">صغير (حتى 1 لتر)</option>
+                            <option value="medium">متوسط (1-3 لتر)</option>
+                            <option value="large">كبير (3+ لتر)</option>
+                            <option value="family">عبوة عائلية</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المنتجات -->
+        <section class="cleaning-products">
+            <div class="products-header">
+                <div class="header-left">
+                    <h2><i class="fas fa-spray-can"></i> منتجات التنظيف</h2>
+                    <div class="products-stats">
+                        <span class="stat-item">
+                            <i class="fas fa-box"></i>
+                            <span id="productsCount">0</span> منتج
+                        </span>
+                        <span class="stat-item">
+                            <i class="fas fa-tag"></i>
+                            <span id="offersCount">0</span> عرض
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <button class="view-toggle active" data-view="grid">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="view-toggle" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="products-container grid-view" id="productsContainer">
+                <!-- سيتم تحميل المنتجات ديناميكياً -->
+            </div>
+            
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+                <p>جاري تحميل المنتجات...</p>
+            </div>
+            
+            <div class="no-products" id="noProducts" style="display: none;">
+                <div class="empty-state">
+                    <i class="fas fa-broom"></i>
+                    <h3>لا توجد منتجات تطابق بحثك</h3>
+                    <p>حاول تغيير فلتر البحث أو تصفح الأقسام المختلفة</p>
+                    <button class="btn-reset" id="resetFilters">إعادة تعيين الفلاتر</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم العروض الخاصة -->
+        <section class="cleaning-offers">
+            <div class="offers-header">
+                <h2><i class="fas fa-fire"></i> عروض حصرية على المنظفات</h2>
+                <p>وفر أكثر مع عروضنا المميزة على منتجات التنظيف</p>
+            </div>
+            
+            <div class="offers-grid">
+                <div class="offer-card featured">
+                    <div class="offer-badge">الأكثر طلباً</div>
+                    <div class="offer-content">
+                        <h3>عرض كومبو الغسيل</h3>
+                        <p class="offer-desc">مسحوق غسيل + منعم أقمشة + مطهر</p>
+                        <div class="offer-price">
+                            <span class="old-price">45,000 ريال</span>
+                            <span class="new-price">38,250 ريال</span>
+                        </div>
+                        <div class="offer-savings">
+                            <i class="fas fa-coins"></i>
+                            وفر 6,750 ريال
+                        </div>
+                        <button class="btn-offer">احصل على العرض</button>
+                    </div>
+                    <div class="offer-image">
+                        <img src="../assets/images/cleaning/offer-laundry.jpg" alt="عرض الغسيل">
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-badge">عرض العائلة</div>
+                    <div class="offer-content">
+                        <h3>باقة التنظيف الشامل</h3>
+                        <p class="offer-desc">8 منتجات تنظيف لمنزلك بالكامل</p>
+                        <div class="offer-price">
+                            <span class="old-price">65,000 ريال</span>
+                            <span class="new-price">52,000 ريال</span>
+                        </div>
+                        <button class="btn-offer">اطلب الباقة</button>
+                    </div>
+                </div>
+                
+                <div class="offer-card">
+                    <div class="offer-badge">جديد</div>
+                    <div class="offer-content">
+                        <h3>منتجات صديقة للبيئة</h3>
+                        <p class="offer-desc">خصم 25% على المنتجات العضوية</p>
+                        <div class="offer-price">
+                            <span class="new-price">بدءاً من 8,500 ريال</span>
+                        </div>
+                        <button class="btn-offer">استكشف المنتجات</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم نصائح التنظيف -->
+        <section class="cleaning-tips">
+            <div class="tips-header">
+                <h2><i class="fas fa-lightbulb"></i> نصائح وخدع التنظيف</h2>
+                <p>استفد من خبرتنا في التنظيف المنزلي</p>
+            </div>
+            
+            <div class="tips-tabs">
+                <button class="tip-tab active" data-tip="stains">إزالة البقع</button>
+                <button class="tip-tab" data-tip="smells">التخلص من الروائح</button>
+                <button class="tip-tab" data-tip="kitchen">تنظيف المطبخ</button>
+                <button class="tip-tab" data-tip="bathroom">تنظيف الحمام</button>
+                <button class="tip-tab" data-tip="eco">تنظيف صديق للبيئة</button>
+            </div>
+            
+            <div class="tips-content">
+                <div class="tip-content active" id="stains-tip">
+                    <div class="tip-image">
+                        <img src="../assets/images/cleaning/tip-stains.jpg" alt="إزالة البقع">
+                    </div>
+                    <div class="tip-text">
+                        <h3>كيف تزيل البقع الصعبة؟</h3>
+                        <ul>
+                            <li><strong>بقع الشحم:</strong> استخدم مزيل شحوم متخصص قبل الغسيل</li>
+                            <li><strong>بقع النبيذ الأحمر:</strong> رش الملح على البقعة فوراً ثم اغسلها</li>
+                            <li><strong>بقع الحبر:</strong> استخدم الكحول الطبي بقطنة نظيفة</li>
+                            <li><strong>بقع العرق:</strong> انقع الملابس في ماء بارد مع بيكربونات الصوديوم</li>
+                        </ul>
+                        <div class="tip-products">
+                            <h4>منتجاتنا المقترحة:</h4>
+                            <div class="suggested-products">
+                                <span>فانش بودي</span>
+                                <span>أومو ستاين ريموفر</span>
+                                <span>برسيل ستاين شامبو</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المنتجات الصديقة للبيئة -->
+        <section class="eco-products">
+            <div class="eco-header">
+                <h2><i class="fas fa-leaf"></i> منتجات صديقة للبيئة</h2>
+                <p>نظافة فعالة مع الحفاظ على البيئة</p>
+            </div>
+            
+            <div class="eco-features">
+                <div class="eco-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>قابلة للتحلل</h3>
+                    <p>تتحلل طبيعياً دون تلويث البيئة</p>
+                </div>
+                
+                <div class="eco-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>مكونات طبيعية</h3>
+                    <p>خالية من المواد الكيميائية الضارة</p>
+                </div>
+                
+                <div class="eco-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>آمنة للأطفال</h3>
+                    <p>لا تسبب حساسية أو تهيج الجلد</p>
+                </div>
+                
+                <div class="eco-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>موفرة للمياه</h3>
+                    <p>تتطلب شطفاً أقل وبالتالي توفير المياه</p>
+                </div>
+            </div>
+            
+            <div class="eco-products-grid" id="ecoProducts">
+                <!-- سيتم تحميل المنتجات الصديقة للبيئة ديناميكياً -->
+            </div>
+        </section>
+
+        <!-- قسم أدوات التنظيف -->
+        <section class="cleaning-tools">
+            <div class="tools-header">
+                <h2><i class="fas fa-tools"></i> أدوات ومستلزمات التنظيف</h2>
+                <p>كل ما تحتاجه للتنظيف المنزلي المحترف</p>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <div class="category-header">
+                        <i class="fas fa-broom"></i>
+                        <h3>فرش وأدوات الأرضيات</h3>
+                    </div>
+                    <ul class="tools-list">
+                        <li>مكانس كهربائية</li>
+                        <li>ممسحات أرضية</li>
+                        <li>فرش تنظيف السجاد</li>
+                        <li>مكنسة يدوية</li>
+                    </ul>
+                </div>
+                
+                <div class="tool-category">
+                    <div class="category-header">
+                        <i class="fas fa-pump-soap"></i>
+                        <h3>أدوات المطبخ</h3>
+                    </div>
+                    <ul class="tools-list">
+                        <li>إسفنج وألياف تنظيف</li>
+                        <li>فرشاة غسيل الصحون</li>
+                        <li>منظف الأفران</li>
+                        <li>قفازات مطاطية</li>
+                    </ul>
+                </div>
+                
+                <div class="tool-category">
+                    <div class="category-header">
+                        <i class="fas fa-spray-can"></i>
+                        <h3>عبوات ورشاشات</h3>
+                    </div>
+                    <ul class="tools-list">
+                        <li>رشاشات فارغة</li>
+                        <li>عبوات تخزين</li>
+                        <li>دلو تنظيف</li>
+                        <li>علب سلة المهملات</li>
+                    </ul>
+                </div>
+                
+                <div class="tool-category">
+                    <div class="category-header">
+                        <i class="fas fa-hands"></i>
+                        <h3>مستلزمات الحماية</h3>
+                    </div>
+                    <ul class="tools-list">
+                        <li>قفازات واقية</li>
+                        <li>كمامات واقية</li>
+                        <li>نظارات حماية</li>
+                        <li>أحذية واقية</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الاستخدام الآمن -->
+        <section class="safety-section">
+            <div class="safety-header">
+                <h2><i class="fas fa-exclamation-triangle"></i> نصائح السلامة والاستخدام الآمن</h2>
+                <p>حماية لك ولعائلتك أثناء استخدام المنظفات</p>
+            </div>
+            
+            <div class="safety-content">
+                <div class="safety-warnings">
+                    <h3><i class="fas fa-ban"></i> تحذيرات هامة</h3>
+                    <ul class="warnings-list">
+                        <li>ابتعد عن العينين والأنف والفم</li>
+                        <li>احفظ بعيداً عن متناول الأطفال</li>
+                        <li>لا تخلط منظفات مختلفة معاً</li>
+                        <li>استخدم في مكان جيد التهوية</li>
+                        <li>اغسل يديك بعد الاستخدام</li>
+                    </ul>
+                </div>
+                
+                <div class="safety-tips">
+                    <h3><i class="fas fa-check-circle"></i> نصائح الاستخدام</h3>
+                    <ul class="tips-list">
+                        <li>اقرأ التعليمات قبل الاستخدام</li>
+                        <li>استخدم الكمية الموصى بها فقط</li>
+                        <li>تأكد من إغلاق العبوة بإحكام</li>
+                        <li>تخلص من العبوات الفارغة بشكل آمن</li>
+                        <li>احفظ في مكان بارد وجاف</li>
+                    </ul>
+                </div>
+                
+                <div class="emergency-info">
+                    <h3><i class="fas fa-phone-alt"></i> معلومات الطوارئ</h3>
+                    <div class="emergency-contacts">
+                        <p><strong>التسمم:</strong> اتصل بالطوارئ فوراً 911</p>
+                        <p><strong>ملامسة العين:</strong> اغسل بالماء 15 دقيقة</p>
+                        <p><strong>البلع:</strong> لا تجبر على التقيؤ، اتصل بالطوارئ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة -->
+        <section class="cleaning-faq">
+            <div class="faq-header">
+                <h2><i class="fas fa-question-circle"></i> أسئلة شائعة عن المنظفات</h2>
+                <p>إجابات على استفساراتكم حول منتجات التنظيف</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما الفرق بين المسحوق العادي والمسحوق الأوتوماتيك؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>المسحوق الأوتوماتيك مصمم للعمل في الغسالات الأوتوماتيكية حيث ينتج رغوة أقل لتناسب أنظمة الغسيل الآلي، بينما المسحوق العادي ينتج رغوة أكثر ويناسب الغسيل اليدوي والغسالات العادية.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل المنظفات الصديقة للبيئة أقل فعالية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>لا، المنظفات الصديقة للبيئة بنفس فعالية المنظفات التقليدية ولكنها تستخدم مكونات طبيعية قابلة للتحلل وتكون أقل ضرراً على البيئة وصحة الإنسان.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كم تبقى المنظفات صالحة للاستخدام؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>معظم المنظفات تبقى فعالة لمدة 2-3 سنوات إذا حفظت في مكان بارد وجاف بعيداً عن أشعة الشمس المباشرة. تحقق من تاريخ الصلاحية على العبوة.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل يمكنني استخدام منظف الأرضيات في تنظيف السجاد؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>لا، لكل نوع من الأسطح منظف خاص. استخدم شامبو السجاد للسجاد ومنظف الأرضيات للأرضيات الصلبة. استخدام المنتج الخطأ قد يسبب تلف السجاد.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم العروض الموسمية -->
+        <section class="seasonal-offers">
+            <div class="seasonal-header">
+                <h2><i class="fas fa-calendar-alt"></i> عروض موسم التنظيف الربيعي</h2>
+                <p>استعد لفصل الربيع بمنتجات تنظيف مميزة</p>
+            </div>
+            
+            <div class="seasonal-content">
+                <div class="seasonal-image">
+                    <img src="../assets/images/cleaning/spring-cleaning.jpg" alt="التنظيف الربيعي">
+                </div>
+                
+                <div class="seasonal-details">
+                    <h3>خصم 30% على باقة التنظيف الشامل</h3>
+                    <p class="seasonal-desc">احصل على كل ما تحتاجه لتنظيف منزلك بالكامل بخصم خاص</p>
+                    
+                    <div class="seasonal-package">
+                        <h4>تشمل الباقة:</h4>
+                        <ul class="package-items">
+                            <li>مسحوق غسيل 5 كجم</li>
+                            <li>سائل غسيل الصحون 5 لتر</li>
+                            <li>منظف أرضيات 5 لتر</li>
+                            <li>مطهر الحمام 2 لتر</li>
+                            <li>معطر جو × 3 عبوات</li>
+                            <li>مجموعة أدوات تنظيف</li>
+                        </ul>
+                        
+                        <div class="package-price">
+                            <div class="price-old">85,000 ريال</div>
+                            <div class="price-new">59,500 ريال</div>
+                            <div class="price-save">وفر 25,500 ريال</div>
+                        </div>
+                        
+                        <button class="btn-seasonal">احصل على الباقة الموسمية</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cleaning-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>قسم المنظفات والمنزلية</h3>
+                <p>نوفر لكم أجود أنواع المنظفات والمنتجات المنزلية بأفضل الأسعار وجودة مضمونة</p>
+                <div class="footer-certificates">
+                    <span><i class="fas fa-certificate"></i> منتجات معتمدة</span>
+                    <span><i class="fas fa-shield-alt"></i> آمنة للاستخدام</span>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="products.html">جميع المنتجات</a></li>
+                    <li><a href="groceries.html">المواد التموينية</a></li>
+                    <li><a href="cleaning.html" class="active">المنظفات والمنزلية</a></li>
+                    <li><a href="vegetables.html">الخضروات والفواكه</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>معلومات مهمة</h3>
+                <div class="safety-info">
+                    <p><i class="fas fa-exclamation-circle"></i> احفظ بعيداً عن متناول الأطفال</p>
+                    <p><i class="fas fa-tint"></i> استخدم وفق التعليمات</p>
+                    <p><i class="fas fa-recycle"></i> تخلص من العبوات بشكل آمن</p>
+                </div>
+                <div class="delivery-info">
+                    <h4>التوصيل للمنازل:</h4>
+                    <p>مجاني للمشتريات فوق 40,000 ريال</p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 01-2345678</p>
+                    <p><i class="fas fa-envelope"></i> cleaning@alhuda-modern.com</p>
+                    <p><i class="fas fa-clock"></i> يومياً: 7 ص - 12 م</p>
+                    <p><i class="fas fa-map-marker-alt"></i> صنعاء - شارع الزبيري</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                © 2026 قسم المنظفات والمنزلية - الهدى الحديث. جميع الحقوق محفوظة.
+            </div>
+            <div class="footer-disclaimer">
+                <p><i class="fas fa-info-circle"></i> جميع المنتجات تخضع لشروط السلامة والمعايير الصحية المعتمدة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/cleaning.js"></script>
+</body>
+</html>

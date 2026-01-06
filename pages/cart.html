@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - الهدى الحديث</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-store"></i>
+            <span>الهدى الحديث</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="mainNav">
+            <a href="../index.html">الرئيسية</a>
+            <a href="../index.html#about">من نحن</a>
+            <a href="../index.html#categories">الأقسام</a>
+            <a href="../index.html#offers">العروض</a>
+            <a href="products.html">المنتجات</a>
+            <a href="../index.html#testimonials">آراء العملاء</a>
+            <a href="contact.html" class="active">تواصل معنا</a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="page-header">
+            <h1>تواصل معنا</h1>
+            <p>نحن هنا لمساعدتك وخدمتك</p>
+        </section>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>عنواننا</h3>
+                    <p>صنعاء، اليمن</p>
+                    <p>شارع الزبيري، مقابل مركز التسوق</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>هواتفنا</h3>
+                    <p>01-2345678</p>
+                    <p>777123456</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>أوقات العمل</h3>
+                    <p>يومياً: 7:00 ص - 12:00 م</p>
+                    <p>الجمعة: 2:00 م - 12:00 م</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>info@alhuda-modern.com</p>
+                    <p>support@alhuda-modern.com</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2>أرسل رسالة</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">الموضوع</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">الرسالة</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <h2>موقعنا على الخريطة</h2>
+            <div class="map-placeholder">
+                <i class="fas fa-map"></i>
+                <p>خريطة موقع سوبر ماركت الهدى الحديث</p>
+                <small>إحداثيات الموقع: 15.3694° N, 44.1910° E</small>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>

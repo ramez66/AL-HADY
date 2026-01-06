@@ -1,0 +1,688 @@
+/* تنسيقات خاصة بصفحة اللحوم */
+
+.meats-page {
+    background-color: #fef8f5;
+}
+
+/* هيرو اللحوم */
+.meats-hero {
+    background: linear-gradient(rgba(139, 0, 0, 0.85), rgba(139, 0, 0, 0.9)), 
+                url('../images/meats/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.meats-hero .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.meats-hero .hero-content h1 i {
+    font-size: 2.2rem;
+}
+
+.meats-hero .hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+.hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.hero-features span {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+}
+
+.hero-features span:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+/* قسم الجودة */
+.quality-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.quality-content h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #8b0000;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quality-card {
+    background: #fff9f6;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #ffe8e8;
+    transition: all 0.3s;
+}
+
+.quality-card:hover {
+    transform: translateY(-10px);
+    border-color: #8b0000;
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.1);
+}
+
+.quality-card i {
+    font-size: 2.5rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+}
+
+.quality-card h3 {
+    color: #8b0000;
+    margin-bottom: 0.8rem;
+}
+
+.quality-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* أنواع اللحوم */
+.meat-types {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+}
+
+.type-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.8rem;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: #8b0000;
+    color: #8b0000;
+}
+
+.filter-btn.active {
+    background: #8b0000;
+    border-color: #8b0000;
+    color: white;
+}
+
+.meats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.meat-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.meat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(139, 0, 0, 0.15);
+}
+
+.meat-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff6b6b;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.meat-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.meat-info {
+    padding: 1.5rem;
+}
+
+.meat-info h3 {
+    color: #8b0000;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.meat-info .description {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.meat-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.meat-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8b0000;
+}
+
+.meat-unit {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.meat-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.quantity-btn:hover {
+    background: #e0e0e0;
+}
+
+.quantity-input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    font-size: 1rem;
+}
+
+.add-to-cart-meat {
+    flex: 1;
+    background: #8b0000;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.add-to-cart-meat:hover {
+    background: #a00000;
+}
+
+/* نصائح للحوم */
+.meat-tips {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.tips-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tips-content {
+    flex: 1;
+}
+
+.tips-content h2 {
+    font-size: 2rem;
+    color: #8b0000;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tip-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.tip-number {
+    width: 40px;
+    height: 40px;
+    background: #8b0000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.tip-text h3 {
+    color: #8b0000;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.tip-text p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.tips-image {
+    flex: 1;
+}
+
+.tips-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* خدمات التقطيع */
+.cutting-section {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+}
+
+.cutting-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+
+.cutting-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.cutting-card:hover {
+    border-color: #8b0000;
+    transform: translateY(-5px);
+}
+
+.cutting-card i {
+    font-size: 2.5rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+}
+
+.cutting-card h3 {
+    color: #8b0000;
+    margin-bottom: 0.8rem;
+}
+
+.cutting-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* جدول الأسعار */
+.price-table-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.price-table-container {
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    overflow-x: auto;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.price-table thead {
+    background: #8b0000;
+    color: white;
+}
+
+.price-table th {
+    padding: 1.2rem;
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.price-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.3s;
+}
+
+.price-table tbody tr:hover {
+    background: #fff9f6;
+}
+
+.price-table td {
+    padding: 1rem 1.2rem;
+    color: #444;
+}
+
+.price-table td:first-child {
+    font-weight: 600;
+    color: #8b0000;
+}
+
+.price-table .price-cell {
+    font-weight: bold;
+    color: #8b0000;
+    font-size: 1.1rem;
+}
+
+.price-table .status-cell {
+    font-weight: 600;
+}
+
+.status-available {
+    color: #2e7d32;
+}
+
+.status-limited {
+    color: #ff9800;
+}
+
+.price-table .action-cell {
+    text-align: center;
+}
+
+.order-btn {
+    padding: 0.6rem 1.5rem;
+    background: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.order-btn:hover {
+    background: #a00000;
+}
+
+/* قسم الأسئلة الشائعة للحوم */
+.meat-faq {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+}
+
+/* قسم الطلب السريع */
+.quick-order {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #8b0000 0%, #a00000 100%);
+    color: white;
+}
+
+.quick-order-container {
+    display: flex;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.order-info {
+    flex: 1;
+}
+
+.order-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.order-info p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.order-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature i {
+    font-size: 1.5rem;
+    color: #ffcc00;
+}
+
+.feature span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.order-form {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.order-form h3 {
+    color: #8b0000;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+}
+
+.order-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.order-form input,
+.order-form select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.order-form input:focus,
+.order-form select:focus {
+    outline: none;
+    border-color: #8b0000;
+}
+
+.btn-order {
+    width: 100%;
+    padding: 1rem;
+    background: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+.btn-order:hover {
+    background: #a00000;
+}
+
+/* التجاوب مع الشاشات المختلفة */
+@media (max-width: 992px) {
+    .tips-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .quick-order-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .order-info h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .meats-hero .hero-content h1 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .type-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .meats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .meat-actions {
+        flex-direction: column;
+    }
+    
+    .quantity-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .price-table {
+        font-size: 0.9rem;
+    }
+    
+    .price-table th,
+    .price-table td {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .meats-hero {
+        padding: 3rem 1rem;
+    }
+    
+    .quality-section,
+    .meat-types,
+    .meat-tips,
+    .cutting-section,
+    .price-table-section,
+    .meat-faq,
+    .quick-order {
+        padding: 3rem 1rem;
+    }
+    
+    .order-form {
+        padding: 1.5rem;
+    }
+}
